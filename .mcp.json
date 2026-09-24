@@ -1,0 +1,20 @@
+{
+  "mcpServers": {
+    "pdf-mcp": {
+      "command": "uvx",
+      "args": ["pdf-mcp"]
+    },
+    "pdf-tools": {
+      "command": "uvx",
+      "args": ["mcp-pdf"]
+    },
+    "pdf-reader": {
+      "command": "uvx",
+      "args": [
+        "--with", "mcp<2",
+        "--from", "git+https://github.com/gstiebler/pdf-mcp-server.git",
+        "pdf-mcp-server"
+      ]
+    }
+  }
+}
