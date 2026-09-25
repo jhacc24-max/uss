@@ -84,50 +84,56 @@ La demanda formativa se refiere al interés o la necesidad que tienen tanto indi
 - Que tenga entre 16 y 25 años de edad.
 - Que se encuentre cursando el 5.° de secundaria, o tenga secundaria completa, pero que no se encuentre cursando estudios superiores.
 
-**Tabla 1. Evolución de la población de los niveles socioeconómicos B, C y D de Lambayeque**
+Para la estimación se utilizan fuentes oficiales y de mercado disponibles. Dado que no se cuenta aún con una encuesta propia de intención vocacional, las cifras de las Tablas 1 a 4 son **estimaciones referenciales** construidas con supuestos explícitos, que deberán reemplazarse con los resultados de dicha encuesta [VERIFICAR].
 
-|  | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 | 2025* |
-|---|---|---|---|---|---|---|---|
-| Población de los niveles BCD en Lambayeque |  |  |  |  |  |  |  |
-| % de la población de Lambayeque |  |  |  |  |  |  |  |
+**Tabla 1. Población de Lambayeque según nivel socioeconómico**
 
-*Fuente: INEI – ENAHO; APEIM. * Proyectado. [DATO PENDIENTE]*
+| Concepto | NSE AB | NSE C | NSE D | NSE E | Total |
+|---|---|---|---|---|---|
+| Estructura socioeconómica (%) | 10,5 | 23,8 | 30,7 | 35,0 | 100,0 |
+| Población estimada 2024 (hab.) | 142 401 | 322 776 | 416 354 | 474 671 | 1 356 202 |
 
-**Tabla 2. Evolución de la población de 16 a 25 años en los niveles socioeconómicos B, C y D de Lambayeque**
+*Fuente: población total, PRODUCE (2025) sobre INEI; estructura NSE, CPI (en SINEACE, Caracterización de la región Lambayeque). La estructura NSE corresponde a una medición anterior; actualizar con CPI "Perú: Población 2024" [VERIFICAR].*
 
-|  | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 | 2025* |
-|---|---|---|---|---|---|---|---|
-| Población de 16-25 años NSE BCD |  |  |  |  |  |  |  |
-| % de la población de Lambayeque |  |  |  |  |  |  |  |
+**Tabla 2. Población de 15 a 24 años en los niveles socioeconómicos C y D de Lambayeque, 2024**
 
-*Fuente: INEI – ENAHO. * Proyectado. [DATO PENDIENTE]*
+| Concepto | Valor | Sustento |
+|---|---|---|
+| Población total de Lambayeque | 1 356 202 | PRODUCE (2025) |
+| % de población de 15 a 24 años | 15,3 % | ENDES 2024: hombres 15,9 %, mujeres 14,7 % (p. 15) |
+| Población de 15 a 24 años | 207 401 | Cálculo propio |
+| % en NSE C y D | 54,5 % | CPI (23,8 % + 30,7 %) |
+| Población de 15 a 24 años en NSE C y D (2024) | 113 034 | Cálculo propio |
+
+*Nota: se usa el tramo de 15 a 24 años de la ENDES como aproximación al rango de 16 a 25 años del criterio. No se incluye el NSE B por no contar con su valor separado del A; su inclusión elevaría la población objetivo.*
 
 **Tabla 3. Población objetivo proyectada (2027-2033)**
 
 |  | 2027 | 2028 | 2029 | 2030 | 2031 | 2032 | 2033 |
 |---|---|---|---|---|---|---|---|
-| Población objetivo proyectada |  |  |  |  |  |  |  |
+| Población objetivo proyectada | 115 424 | 116 232 | 117 046 | 117 865 | 118 690 | 119 521 | 120 357 |
 
-*[DATO PENDIENTE]*
+*Fuente: elaboración propia. Proyección con la tasa de crecimiento poblacional intercensal 2007-2017 de Lambayeque (0,7 % anual; BCRP, p. 2).*
 
-**Tabla 4. Demanda proyectada de la carrera de Farmacia y Bioquímica por el público objetivo 2027-2033**
+**Tabla 4. Demanda proyectada de la carrera de Farmacia y Bioquímica por el público objetivo 2027-2033 (escenarios)**
 
-|  | 2027 | 2028 | 2029 | 2030 | 2031 | 2032 | 2033 |
+| Escenario de interés | 2027 | 2028 | 2029 | 2030 | 2031 | 2032 | 2033 |
 |---|---|---|---|---|---|---|---|
-| Demanda educativa proyectada |  |  |  |  |  |  |  |
-| % población objetivo interesada en Farmacia y Bioquímica |  |  |  |  |  |  |  |
+| Conservador (1 %) | 1 154 | 1 162 | 1 170 | 1 179 | 1 187 | 1 195 | 1 204 |
+| Medio (2 %) | 2 308 | 2 325 | 2 341 | 2 357 | 2 374 | 2 390 | 2 407 |
+| Alto (3 %) | 3 463 | 3 487 | 3 511 | 3 536 | 3 561 | 3 586 | 3 611 |
 
-*Datos proyectados según encuesta de intención vocacional (por realizar). [DATO PENDIENTE]*
+*Fuente: elaboración propia. Porcentajes de interés supuestos: en el estudio DQE Norte 2025 de Arellano, Medicina concentra el 13 % de las preferencias y Farmacia no figura entre las cinco primeras (< 6 %). Reemplazar por el resultado de la encuesta propia [VERIFICAR].*
 
 #### 5.1.1. Validación de las fuentes de mercado e interés vocacional
 
 Los datos sobre la preferencia vocacional y el posicionamiento institucional se sustentan en tres fuentes principales del sector educativo y laboral peruano:
 
-**a) Arellano Consultoría (estudios "Universidad Ideal" y "Marcas Educativas").** Mide el top of mind, la intención de elección y la percepción de valor de las universidades a nivel nacional y regional. En el norte del país, la UTP se ubica en los primeros lugares de preferencia en provincias (Chiclayo, Piura y Trujillo) dentro del segmento de jóvenes que buscan una rápida inserción laboral, infraestructura moderna (laboratorios) y pensiones escalonadas. [VERIFICAR] Adjuntar el estudio y citar edición, año y resultados para Chiclayo.
+**a) Arellano Consultoría – estudio "Dónde Quiero Estudiar (DQE) Norte y Sur 2025: Pregrado universidades".** Es la primera edición del estudio y recoge la opinión de jóvenes de 15 a 23 años egresados o por egresar del colegio en los principales departamentos del norte (Piura, La Libertad, **Lambayeque** y Áncash; 1 264 casos) y del sur. En el norte, las primeras opciones de carrera son Medicina (13 %), Derecho (13 %), Administración de Empresas (11 %), Ingeniería Civil (9 %) e Ingeniería de Sistemas (6 %), lo que confirma que las ciencias de la salud encabezan la preferencia vocacional. Los jóvenes priorizan las oportunidades laborales, una carrera bien remunerada y una amplia variedad de cursos o campos de especialización. En Chiclayo, la UTP figura en el primer lugar de preferencia, asociada a la búsqueda de rápida inserción laboral, infraestructura moderna (laboratorios) y pensiones escalonadas. [VERIFICAR] Cifras tomadas de la difusión del estudio en Gestión y en medios institucionales; adjuntar el informe de Arellano.
 
-**b) Portal "Ponte en Carrera" (MTPE/MINEDU) y reportes de la SUNEDU.** Registran postulantes, egresados y demanda de carreras en el sistema universitario. Las disciplinas de ciencias de la salud se posicionan de forma consistente entre las tres áreas con mayor número de postulantes en la macrorregión norte, junto con Administración/Negocios e Ingenierías. [VERIFICAR] Citar el reporte y los valores de postulantes.
+**b) Oferta universitaria reciente (SUNEDU/portales de transparencia) y portal "Ponte en Carrera" (MINEDU).** La UTP abrió la carrera de Farmacia y Bioquímica en 2025 y en su primer año registró **276 postulantes y 240 ingresantes** a nivel nacional (201 y 186 en 2025-1; 75 y 54 en 2025-2), con **158 matriculados** en 2025-I y 144 en 2025-II (UTP, Postulantes e ingresantes pregrado 2022-2025, pp. 1 y 3). Ello evidencia una demanda efectiva inmediata por la carrera. Las disciplinas de la salud se posicionan de forma consistente entre las tres áreas con mayor número de postulantes en la macrorregión norte, junto con Administración/Negocios e Ingenierías [VERIFICAR] (consultar el portal Ponte en Carrera).
 
-**c) Observatorio Ocupacional del Ministerio de Trabajo (MTPE).** Mide la demanda de profesionales por regiones. Para Lambayeque, la Encuesta de Demanda Ocupacional 2023 ubica a **Farmacia y Bioquímica como la segunda carrera técnica más demandada en 2024** (técnicos de 1 a 2 años), y a Medicina y Enfermería entre las carreras universitarias más requeridas (MTPE, Demanda de ocupaciones en Lambayeque 2024, pp. 14-15). Asimismo, se observa una demanda creciente de personal especializado en salud preventiva, diagnóstico analítico y gestión de suministros médicos, impulsada por la expansión de las redes hospitalarias públicas y privadas en Chiclayo [VERIFICAR].
+**c) Observatorio Ocupacional del Ministerio de Trabajo (MTPE).** Para Lambayeque, la Encuesta de Demanda Ocupacional 2023 ubica a **Farmacia y Bioquímica como la segunda carrera técnica más demandada en 2024** (técnicos de 1 a 2 años), y a Medicina y Enfermería entre las carreras universitarias más requeridas (MTPE, Demanda de ocupaciones en Lambayeque 2024, pp. 14-15). Esto muestra una demanda sostenida de personal especializado en salud, diagnóstico y gestión de medicamentos, impulsada por la expansión de las redes hospitalarias públicas y privadas en Chiclayo.
 
 ### 5.2.- Oferta educativa
 
@@ -137,35 +143,37 @@ En la región Lambayeque, la oferta licenciada de Farmacia y Bioquímica es redu
 
 | TIPO | UNIVERSIDAD | LICENCIA SUNEDU | FARMACIA Y BIOQUÍMICA |
 |---|---|---|---|
-| Privada | Universidad Tecnológica del Perú (UTP) – Chiclayo | Licenciada | Sí [VERIFICAR] |
-| Pública | Universidad Nacional Pedro Ruiz Gallo (UNPRG) | Licenciada (2023) | [VERIFICAR] |
+| Privada | Universidad Tecnológica del Perú (UTP) – Chiclayo | Licenciada | Sí, desde 2025 |
+| Pública | Universidad Nacional Pedro Ruiz Gallo (UNPRG) | Licenciada (2023) | No figura entre sus facultades [VERIFICAR] |
 | Privada | Universidad de Chiclayo (UDCH) | Denegada | Ofrecía – en cese |
 | Privada | Universidad de Lambayeque (UDL) | Denegada | En cese |
 | Privada | Universidad Privada Juan Mejía Baca (UMB) | Denegada | En cese |
 
 *Fuente: SUNEDU; portales institucionales.*
 
-Para estimar la oferta educativa se utilizarán las estadísticas registradas en los portales de transparencia de estas universidades (Tabla 6).
+Para estimar la oferta educativa se utilizan las estadísticas publicadas en el portal de transparencia de la UTP, única universidad licenciada identificada con la carrera en la región (Tabla 6). La UTP reporta sus cifras consolidadas para todas sus sedes, por lo que el total nacional se toma como **tope superior** de la oferta en Chiclayo.
 
-**Tabla 6. Ingresantes a Farmacia y Bioquímica en las universidades de Lambayeque**
+**Tabla 6. Postulantes e ingresantes a Farmacia y Bioquímica – UTP (todas las sedes), 2025**
 
-| UNIVERSIDAD | 2023 | 2024 | 2025 |
+| Concepto | 2025-1 | 2025-2 | Total 2025 |
 |---|---|---|---|
-| Universidad Tecnológica del Perú (UTP) – Chiclayo |  |  |  |
-| Universidad Nacional Pedro Ruiz Gallo (si corresponde) |  |  |  |
-| Total |  |  |  |
+| Postulantes | 201 | 75 | 276 |
+| Ingresantes | 186 | 54 | 240 |
+| Matriculados | 158 | 144 | – |
 
-*Fuente: portal de transparencia de cada universidad; SIU-SUNEDU. [DATO PENDIENTE]*
+*Fuente: UTP, Postulantes, ingresantes, matriculados y egresados pregrado 2022-2025 (datos al 31.10.2025), pp. 1 y 3. Falta el desagregado de la sede Chiclayo [DATO PENDIENTE].*
 
-**Tabla 7. Brecha entre demanda y oferta educativa en Lambayeque**
+**Tabla 7. Brecha entre demanda y oferta educativa en Lambayeque (escenario medio)**
 
 | Concepto | 2027 | 2028 | 2029 | 2030 | 2031 | 2032 | 2033 |
 |---|---|---|---|---|---|---|---|
-| Demanda educativa proyectada |  |  |  |  |  |  |  |
-| Oferta educativa proyectada |  |  |  |  |  |  |  |
-| Brecha demanda/oferta |  |  |  |  |  |  |  |
+| Demanda educativa proyectada (2 %) | 2 308 | 2 325 | 2 341 | 2 357 | 2 374 | 2 390 | 2 407 |
+| Oferta educativa proyectada (tope) | 240 | 240 | 240 | 240 | 240 | 240 | 240 |
+| Brecha demanda/oferta | 2 068 | 2 085 | 2 101 | 2 117 | 2 134 | 2 150 | 2 167 |
 
-*Fuente: elaboración propia (Tabla 4 − Tabla 6).*
+*Fuente: elaboración propia (Tabla 4 − Tabla 6). La oferta se mantiene constante en el total de ingresantes 2025 de la UTP (tope superior).*
+
+Aun con el escenario conservador (1 % de interés) y tomando como oferta regional el total nacional de ingresantes de la UTP, para 2027 habría una brecha de más de 900 jóvenes interesados en estudiar Farmacia y Bioquímica que no encontrarían una vacante en una universidad licenciada de la región. En el escenario medio, la brecha supera los 2 000 jóvenes por año.
 
 ## VI.- JUSTIFICACIÓN DE LA CREACIÓN DEL PROGRAMA
 
@@ -177,7 +185,7 @@ La Ley N.° 29459, Ley de los Productos Farmacéuticos, Dispositivos Médicos y 
 
 La región enfrenta, además, un problema persistente de comercio ilegal de medicamentos: la GERESA Lambayeque intervino más de 100 establecimientos en 14 operativos y **decomisó más de una tonelada de medicamentos falsificados, de contrabando o sin registro sanitario**, y se clausuraron boticas ubicadas junto a los hospitales Las Mercedes, Regional y Juan Pablo II. Contar con más farmacéuticos formados en la región fortalece la vigilancia sanitaria, la inspección y el uso racional de medicamentos.
 
-Asimismo, la carga de enfermedad regional exige atención farmacéutica y diagnóstico de laboratorio sostenidos: la **anemia afectó al 25,5 % de los niños de 6 a 59 meses en 2024** (INEI – ENDES 2024, Lambayeque, p. 67); el 41,8 % de la población de 15 años a más presenta al menos una comorbilidad asociada a obesidad, diabetes mellitus o hipertensión [VERIFICAR]; y la epidemia de dengue de 2023 superó los 6 400 casos, con más de 130 hospitalizados y 16 fallecidos.
+Asimismo, la carga de enfermedad regional exige atención farmacéutica y diagnóstico de laboratorio sostenidos: la **anemia afectó al 25,5 % de los niños de 6 a 59 meses en 2024** (INEI – ENDES 2024, Lambayeque, p. 67); el **41,2 % de la población de 15 años a más presenta al menos una comorbilidad** (obesidad, diabetes mellitus y/o hipertensión), 43,5 % en el área urbana, y la **hipertensión arterial afecta al 21,3 %** de ese grupo (INEI – ENDES 2024, Enfermedades No Transmisibles y Transmisibles, Lambayeque, pp. 9 y 17); y la epidemia de dengue de 2023 superó los 6 400 casos, con más de 130 hospitalizados y 16 fallecidos.
 
 En ese sentido, concluimos que, por la exigencia legal, la demanda sanitaria y el crecimiento del sector, la creación del programa de Farmacia y Bioquímica en Chiclayo tiene una gran pertinencia social y se justifica para cubrir la demanda educativa y laboral insatisfecha de la región.
 
@@ -218,7 +226,7 @@ De lo expuesto se observa que la mayor demanda corresponde a Químicos Farmacéu
 #### 6.2.1. Necesidades locales:
 
 - Población y concentración urbana: 1 356 202 habitantes, 81 % urbanos, con Chiclayo como centro de referencia sanitaria del nororiente.
-- Carga de enfermedad: anemia infantil de 25,5 % (ENDES 2024), comorbilidades crónicas en la población adulta y brotes recurrentes de dengue, que requieren atención farmacéutica, diagnóstico de laboratorio y educación sanitaria.
+- Carga de enfermedad: anemia infantil de 25,5 %, 41,2 % de adultos con obesidad, diabetes o hipertensión y 21,3 % con hipertensión arterial (ENDES 2024) y brotes recurrentes de dengue, que requieren atención farmacéutica, diagnóstico de laboratorio y educación sanitaria.
 - Desigualdad territorial: la pobreza en Ferreñafe (46,7 %) y Lambayeque (31,4 %) supera ampliamente la de Chiclayo (17,8 %); en 2025 cuatro distritos de la región no contaban con ninguna botica o farmacia privada (DIGEMID).
 - Medicamentos ilegales: más de una tonelada decomisada y boticas clausuradas junto a hospitales; se necesitan profesionales para la dirección técnica, la inspección y la farmacovigilancia.
 - Baja proporción de profesionales: solo el 13,9 % de la PEA ocupada tiene educación universitaria (MTPE, 2022).
@@ -260,7 +268,7 @@ A mediados de 2024, ProInversión identificó **31 proyectos en la región por m
 
 ### 6.3. Análisis de la viabilidad del programa
 
-De las universidades y programas de formación universitaria en el departamento de Lambayeque, la oferta licenciada de Farmacia y Bioquímica se reduce a muy pocas instituciones (la UTP en Chiclayo y la UNPRG [VERIFICAR]). Las universidades que ofrecían la carrera sin licencia (Universidad de Chiclayo) o que operaban en la región sin licencia (Universidad de Lambayeque y Universidad Juan Mejía Baca) se encuentran en cese, lo que deja una demanda regional desatendida y estudiantes que se trasladan a otras ciudades.
+De las universidades y programas de formación universitaria en el departamento de Lambayeque, la única universidad licenciada identificada con Farmacia y Bioquímica es la UTP en Chiclayo, que abrió la carrera recién en 2025 (240 ingresantes en todas sus sedes); la UNPRG no ofrece la carrera [VERIFICAR]. Las universidades que ofrecían la carrera sin licencia (Universidad de Chiclayo) o que operaban en la región sin licencia (Universidad de Lambayeque y Universidad Juan Mejía Baca) se encuentran en cese, lo que deja una demanda regional desatendida y estudiantes que se trasladan a otras ciudades.
 
 La Universidad Señor de Sipán ha demostrado un buen manejo de los recursos económicos y financieros, ya que cumple con los proveedores, los trabajadores y el Estado, pagando puntualmente sus obligaciones.
 
@@ -390,7 +398,7 @@ El presente informe técnico sustenta la pertinencia de crear el programa de est
 
 Lambayeque presenta un entorno económico favorable: aporta el 2,7 % del PBI nacional, creció 5,2 % en 2024, cuenta con 79 085 MYPE (89 % en comercio y servicios) y una cartera de inversión superior a S/ 8 800 millones que incluye proyectos de salud. La USS cuenta con sede en la región, respaldo financiero y experiencia en ciencias de la salud.
 
-La viabilidad final depende de completar el estudio de demanda (Tablas 1-4 y 6) y la confirmación de la inversión en laboratorios y de la plana docente [DATO PENDIENTE].
+La estimación referencial de demanda muestra una brecha de entre 900 y 3 200 jóvenes por año según el escenario (Tablas 4 y 7). La viabilidad final depende de validar esa estimación con una encuesta propia de intención vocacional y de la confirmación de la inversión en laboratorios y de la plana docente [DATO PENDIENTE].
 
 ## REFERENCIAS
 
@@ -402,11 +410,14 @@ La viabilidad final depende de completar el estudio de demanda (Tablas 1-4 y 6) 
 - MTPE – GRTPE Lambayeque, OSEL (2024). Tríptico N° 02: Indicadores laborales en el departamento de Lambayeque.
 - MTPE – DGPE (2024). Demanda de ocupaciones en Lambayeque 2024 (Encuesta de Demanda Ocupacional 2023).
 - INEI (2025). Encuesta Demográfica y de Salud Familiar 2024 – Departamento de Lambayeque.
+- INEI (2025). ENDES 2024 – Lambayeque: Enfermedades No Transmisibles y Transmisibles.
+- UTP (2025). Postulantes, ingresantes, matriculados y egresados pregrado 2022-2025 (datos al 31.10.2025).
+- CPI. Estructura socioeconómica de Lambayeque (citado en SINEACE, Caracterización de la región Lambayeque).
 - INEI (2018). Resultados definitivos de los Censos Nacionales 2017 – Lambayeque.
 - GERESA Lambayeque. Notas de prensa sobre operativos contra medicamentos falsificados.
 - SUNEDU. Resoluciones de licenciamiento institucional (Universidad de Chiclayo, Universidad de Lambayeque, Universidad Juan Mejía Baca, UNPRG).
 - EsSalud. Anuncios de construcción de hospitales en Lambayeque.
-- Arellano Consultoría. Estudios "Universidad Ideal" y "Marcas Educativas" [por adjuntar].
+- Arellano Consultoría (2025). Dónde Quiero Estudiar (DQE) Norte y Sur 2025: Pregrado universidades (difusión en Gestión) [informe completo por adjuntar].
 - MTPE/MINEDU. Portal "Ponte en Carrera".
 - Congreso de la República. Ley N.° 29459 – Ley de los Productos Farmacéuticos, Dispositivos Médicos y Productos Sanitarios; Ley N.° 30220 – Ley Universitaria.
 
