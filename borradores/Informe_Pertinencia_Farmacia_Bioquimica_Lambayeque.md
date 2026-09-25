@@ -175,8 +175,8 @@ La región también tiene un problema persistente de **comercio ilegal de medica
 
 Por último, la carga de enfermedad regional exige atención farmacéutica sostenida:
 
-- **41,8 %** de la población de 15 años a más tiene al menos una comorbilidad (obesidad, diabetes mellitus o hipertensión) (ENDES 2024).
-- La **anemia** afecta al 25,5 % de los niños de 6 a 59 meses (ENDES 2024).
+- **41,8 %** de la población de 15 años a más tiene al menos una comorbilidad (obesidad, diabetes mellitus o hipertensión) *[VERIFICAR: no figura en el informe departamental ENDES 2024; buscar en el informe nacional de Enfermedades No Transmisibles]*.
+- La **anemia** afecta al 25,5 % de los niños de 6 a 59 meses (INEI – ENDES 2024, Lambayeque, p. 67; verificado en el PDF oficial).
 - La epidemia de **dengue de 2023** superó los 6 400 casos, con más de 130 hospitalizados y 16 fallecidos, y colapsó los servicios de salud.
 
 Estas condiciones requieren seguimiento farmacoterapéutico, adherencia al tratamiento y gestión de suministros en emergencias.
