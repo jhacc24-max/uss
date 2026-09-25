@@ -2,6 +2,6 @@
   "name": "informe-pertinencia-word",
   "private": true,
   "description": "Genera el Informe de Pertinencia en Word con el formato del informe USS original",
-  "scripts": { "build": "node build.js ../Informe_Pertinencia_Farmacia_Bioquimica_Lambayeque.docx" },
+  "scripts": { "build": "node build.js ../Informe_Pertinencia_Farmacia_Bioquimica_Lambayeque.docx && node a_markdown.js" },
   "dependencies": { "docx": "^9.7.2" }
 }
