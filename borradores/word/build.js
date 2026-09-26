@@ -6,7 +6,7 @@ const {
   PageNumber, LevelFormat, PageBreak, HorizontalPositionRelativeFrom,
   VerticalPositionRelativeFrom, TextWrappingType, HeightRule,
 } = require('docx');
-const C = require('./contenido.js');
+const C = require(process.env.CONTENIDO ? path.resolve(process.env.CONTENIDO) : './contenido.js');
 
 const IMG = path.join(__dirname, 'img');
 const logo = fs.readFileSync(path.join(IMG, 'logo.png'));
@@ -187,6 +187,7 @@ function render(blocks) {
     else if (b.h3) out.push(h3(b.h3));
     else if (b.p) out.push(body(b.p));
     else if (b.nota) out.push(body(b.nota, { shading: { fill: 'FFF8DC', type: ShadingType.CLEAR, color: 'auto' } }));
+    else if (b.opts) b.opts.forEach(x => out.push(new Paragraph({ indent: { left: 567 }, spacing: { after: 60 }, children: runs(x, { font: BODY, size: 22 }) })));
     else if (b.ul) b.ul.forEach(x => Array.isArray(x) ? x.forEach(y => out.push(bullet(y, 1))) : out.push(bullet(x)));
     else if (b.table) {
       if (b.table.titulo) out.push(caption(b.table.titulo));
@@ -208,7 +209,7 @@ const doc = new Document({
   sections: [{
     properties: { page: { size: { width: PAGE_W, height: PAGE_H }, margin: { top: MARGIN_T + 1100, bottom: 1134, left: MARGIN_LR, right: MARGIN_LR, header: 700 } } },
     headers: { default: new Header({ children: [encabezado(), new Paragraph({ children: [] })] }) },
-    children: [...portadaChildren(), ...indice(), ...render(C.cuerpo)],
+    children: C.sinPortada ? render(C.cuerpo) : [...portadaChildren(), ...indice(), ...render(C.cuerpo)],
   }],
 });
 

@@ -127,7 +127,7 @@ La población objetivo se aproxima con los jóvenes de 15 a 29 años que no estu
 | Medio (2 %) | 2 219 | 2 213 | 2 208 | 2 203 | 2 198 | 2 192 | 2 187 |
 | Alto (3 %) | 3 328 | 3 320 | 3 312 | 3 304 | 3 297 | 3 289 | 3 281 |
 
-*Fuente: elaboración propia. Porcentajes de interés supuestos: en el estudio DQE Norte 2025 de Arellano, Medicina concentra el 13 % de las preferencias y Farmacia no figura entre las cinco primeras (< 6 %). Reemplazar por el resultado de la encuesta propia [VERIFICAR].*
+*Fuente: elaboración propia. Los escenarios se acotan con dos referencias: a nivel nacional, el 2,6 % de la población de 17 años a más que estudió o estudia educación superior no universitaria eligió carreras relacionadas con Farmacia y Bioquímica en 2018 (INEI, Indicadores de Educación por Departamentos 2008-2018, cap. 5, p. 8); y en el estudio DQE Norte 2025 de Arellano, Medicina concentra el 13 % de las preferencias y Farmacia no figura entre las cinco primeras (< 6 %). Reemplazar por la tasa de interés efectivo de la encuesta propia (Anexo) [VERIFICAR].*
 
 #### 5.1.1. Validación de las fuentes de mercado e interés vocacional
 
@@ -138,6 +138,8 @@ Los datos sobre la preferencia vocacional y el posicionamiento institucional se 
 **b) Oferta universitaria reciente (portales de transparencia) y portal "Mi Carrera" (MTPE).** La UTP abrió la carrera de Farmacia y Bioquímica en 2025 y en su primer año registró **276 postulantes y 240 ingresantes** a nivel nacional (201 y 186 en 2025-1; 75 y 54 en 2025-2), con **158 matriculados** en 2025-I y 144 en 2025-II (UTP, Postulantes e ingresantes pregrado 2022-2025, pp. 1 y 3). Ello evidencia una demanda efectiva inmediata por la carrera. Complementariamente, el portal **Mi Carrera del MTPE** ubica a **Farmacia en el sexto lugar entre las 30 familias de carreras universitarias más demandadas en Lambayeque**, después de Sistemas y Cómputo, Contabilidad e Impuestos, Enfermería, Educación Primaria y Educación Inicial [VERIFICAR] (registrar fecha de consulta). Las ciencias de la salud (Enfermería y Farmacia) aparecen así entre las seis familias con mayor demanda en la región.
 
 **c) Observatorio Ocupacional del Ministerio de Trabajo (MTPE).** Para Lambayeque, la Encuesta de Demanda Ocupacional 2023 ubica a **Farmacia y Bioquímica como la segunda carrera técnica más demandada en 2024** (técnicos de 1 a 2 años), y a Medicina y Enfermería entre las carreras universitarias más requeridas (MTPE, Demanda de ocupaciones en Lambayeque 2024, pp. 14-15). Esto muestra una demanda sostenida de personal especializado en salud, diagnóstico y gestión de medicamentos, impulsada por la expansión de las redes hospitalarias públicas y privadas en Chiclayo.
+
+**d) Estudios de orientación vocacional en Lambayeque.** Investigaciones recientes con escolares de la región describen el proceso de elección de carrera: un cuestionario de 27 ítems diseñado y validado para estudiantes de secundaria de Lambayeque, con tres dimensiones (factores personales, de agencia o capacidad de decisión y ambientales), V de Aiken = 1,00 y alfa de Cronbach = 0,904 (Villalobos Véliz et al., 2026, Areté 12(23)); una encuesta a estudiantes de quinto de secundaria de 15 a 17 años de colegios urbanos de Lambayeque (universo de 248 estudiantes; Revista EPT, USS); una encuesta en la I.E.P. Santa Lucía de Lambayeque sobre los factores de elección profesional (Repositorio USS); y un estudio con 31 estudiantes de quinto de secundaria de Chiclayo (Repositorio UPC). Además, la Gerencia Regional de Educación implementó la plataforma "Mi Carrera en tu Cole" para estudiantes de cuarto y quinto de secundaria. Estos estudios coinciden en que la elección de carrera depende de factores personales, familiares y económicos, y en que la orientación vocacional en los colegios es limitada; sin embargo, **ninguno reporta el porcentaje de escolares interesados en Farmacia y Bioquímica**. Por ello, se propone aplicar una encuesta propia de intención vocacional (Anexo), basada en las dimensiones del instrumento validado, cuyo resultado reemplazará los escenarios de la Tabla 4.
 
 ### 5.2.- Oferta educativa
 
@@ -411,6 +413,17 @@ Lambayeque presenta un entorno económico favorable: aporta el 2,7 % del PBI nac
 
 La estimación referencial de demanda muestra una brecha de entre 900 y 3 200 jóvenes por año según el escenario (Tablas 4 y 7). La viabilidad final depende de validar esa estimación con una encuesta propia de intención vocacional y de la confirmación de la inversión en laboratorios y de la plana docente [DATO PENDIENTE].
 
+## ANEXO. ENCUESTA DE INTENCIÓN VOCACIONAL
+
+Para validar la demanda educativa se propone aplicar una encuesta a estudiantes de 4.° y 5.° de secundaria de la región (documento anexo: Encuesta_Intencion_Vocacional_Farmacia_Lambayeque.docx). Sus características principales son:
+
+| Elemento | Descripción |
+|---|---|
+| Muestra | 384 estudiantes (95 % de confianza, ±5 % de error), más 10 % por no respuesta: 423 encuestas |
+| Distribución por provincia | Chiclayo 259, Lambayeque 97 y Ferreñafe 28 (proporcional a la población joven, Censo 2017) |
+| Contenido | 17 preguntas: datos generales, planes después del colegio, carrera de interés, interés en Farmacia y Bioquímica, factores personales, de agencia y ambientales, y condiciones económicas |
+| Indicador clave | Tasa de interés efectivo = % "Definitivamente sí" + 0,5 × % "Probablemente sí" (pregunta 9), que se aplicará a la población objetivo de la Tabla 3 |
+
 ## REFERENCIAS
 
 - BCRP – Sucursal Piura (2025). Caracterización del departamento de Lambayeque.
@@ -428,6 +441,9 @@ La estimación referencial de demanda muestra una brecha de entre 900 y 3 200 j�
 - MTPE (2025). Demanda de ocupaciones 2025 (Encuesta de Demanda Ocupacional 2024).
 - MTPE. Portal Mi Carrera – Carreras más demandadas (Lambayeque, universidad). micarrera.trabajo.gob.pe.
 - Colegio Químico Farmacéutico Departamental de Lambayeque. Memoria de Gestión, Consejo Directivo 2023-2024.
+- INEI (2019). Perú: Indicadores de Educación por Departamentos, 2008-2018. Capítulo 5: Profesiones o carreras universitarias.
+- Villalobos Véliz, L. del C., Hernández Fernández, B., et al. (2026). Orientación vocacional en escolares: diseño y validación de un instrumento diagnóstico. Areté, Revista Digital del Doctorado en Educación, 12(23).
+- Gerencia Regional de Educación Lambayeque. Plataforma "Mi Carrera en tu Cole".
 - CPI. Estructura socioeconómica de Lambayeque (citado en SINEACE, Caracterización de la región Lambayeque).
 - INEI (2018). Resultados definitivos de los Censos Nacionales 2017 – Lambayeque.
 - GERESA Lambayeque. Notas de prensa sobre operativos contra medicamentos falsificados.

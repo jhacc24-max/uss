@@ -15,6 +15,7 @@ for (const b of C.cuerpo) {
   else if (b.h3) out.push(`#### ${b.h3}`, '');
   else if (b.p) out.push(b.p, '');
   else if (b.nota) out.push(`> ${b.nota}`, '');
+  else if (b.opts) { b.opts.forEach(x => out.push(`- ${x}`)); out.push(''); }
   else if (b.ul) { b.ul.forEach(x => Array.isArray(x) ? x.forEach(y => out.push(`  - ${y}`)) : out.push(`- ${x}`)); out.push(''); }
   else if (b.table) {
     const t = b.table;
