@@ -1,5 +1,5 @@
-The six-digit correlative folio stamped at the top right of every page, above the header.
+El folio correlativo de seis dígitos estampado arriba a la derecha de cada página, sobre el encabezado.
 
-- Consumer provides `number`; it is zero-padded to six digits (`2066` → `002066`).
-- Folios run continuously across every document in a submission file, not per report: the Psicología–Piura report runs 002057 to 002081.
-- Use `folio` blue only here. Never restart numbering on the cover.
+- Quien lo usa proporciona `number`; se completa con ceros a seis dígitos (`2066` → `002066`).
+- Los folios corren de forma continua en todos los documentos de un expediente, no por informe: el informe de Psicología–Piura va del 002057 al 002081.
+- El azul `folio` se usa solo aquí. Nunca reiniciar la numeración en la portada.

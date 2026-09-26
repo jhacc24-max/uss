@@ -1,57 +1,57 @@
 import type { ReactNode } from 'react';
 
-/** Six-digit correlative folio stamped top right of every page. */
+/** Folio correlativo de seis dígitos estampado arriba a la derecha de cada página. */
 export function Folio(props: { number: number | string; digits?: number }): JSX.Element;
 
-/** Controlled-document header repeated on every page: mark | type + purpose | Fecha / Versión / Hoja. */
+/** Encabezado de documento controlado repetido en cada página: logo | tipo + propósito | Fecha / Versión / Hoja. */
 export function DocHeader(props: {
-  /** The institution's own logo (img or svg). Without it, `institution` is set in type. */
+  /** Logo propio de la institución (img o svg). Sin él, `institution` se compone en texto. */
   mark?: ReactNode;
   institution?: string;
-  /** Document type, e.g. "Informe técnico". Rendered uppercase. */
+  /** Tipo de documento, p. ej. "Informe técnico". Se muestra en mayúsculas. */
   type?: string;
-  /** Purpose line, e.g. "Para la creación de programas en filiales". Rendered uppercase. */
+  /** Línea de propósito, p. ej. "Para la creación de programas en filiales". Se muestra en mayúsculas. */
   purpose: string;
-  /** dd/mm/yyyy */
+  /** dd/mm/aaaa */
   date: string;
   version?: string;
   sheet: number;
   sheets: number;
 }): JSX.Element;
 
-/** Numbered heading: level 1 "V.- MERCADO EDUCATIVO", level 2 "5.1.- Demanda educativa", level 3 run-in "6.2.1. Necesidades locales:". */
+/** Título numerado: nivel 1 "V.- MERCADO EDUCATIVO", nivel 2 "5.1.- Demanda educativa", nivel 3 en línea "6.2.1. Necesidades locales:". */
 export function SectionHeading(props: {
   level?: 1 | 2 | 3;
-  /** "V", "5.1", "6.2.1" — the separator is added. */
+  /** "V", "5.1", "6.2.1": el separador se añade solo. */
   number?: string;
   title: string;
-  /** Level 3 only: the paragraph the heading runs into. */
+  /** Solo nivel 3: el párrafo con el que el título va en línea. */
   children?: ReactNode;
 }): JSX.Element;
 
-/** Numbered data table: caption above, ruled grid, Fuente and notes below. */
+/** Tabla de datos numerada: título encima, cuadrícula con filetes, Fuente y notas debajo. */
 export function DataTable(props: {
   number: number | string;
   title: string;
-  /** First column is the row label ("Concepto"). */
+  /** La primera columna es la etiqueta de fila ("Concepto"). */
   columns: string[];
   rows: (string | number)[][];
-  /** Without the "Fuente: " prefix. */
+  /** Sin el prefijo "Fuente: ". */
   source?: string;
-  /** Extra lines, e.g. "* Datos proyectados según …". */
+  /** Líneas adicionales, p. ej. "* Datos proyectados según …". */
   notes?: string[];
-  /** "head" (default): dark green header row for figures. "band": pale header for text matrices. */
+  /** "head" (por defecto): fila de encabezado verde oscuro para cifras. "band": encabezado claro para matrices de texto. */
   tone?: 'head' | 'band';
   align?: 'right' | 'center';
 }): JSX.Element;
 
-/** The CONTENIDO page. */
+/** La página CONTENIDO. */
 export function Contents(props: {
   title?: string;
   items: { number?: string; title: string; page?: number; level?: 1 | 2 }[];
 }): JSX.Element;
 
-/** A4 cover: full-bleed photo behind a white title panel. */
+/** Portada A4: foto a sangre detrás de un panel blanco con el título. */
 export function ReportCover(props: {
   titleLines: string[];
   program?: string;

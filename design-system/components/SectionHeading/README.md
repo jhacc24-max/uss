@@ -1,6 +1,6 @@
-The numbered heading for all three levels of a report's outline.
+El título numerado para los tres niveles del esquema de un informe.
 
-- Level 1 (chapter): Roman numeral + `.-`, uppercase, `section` style: `V.- MERCADO EDUCATIVO`.
-- Level 2: decimal + `.-`, sentence case, `subsection` style, stepped in by `indent-1`: `5.1.- Demanda educativa`.
-- Level 3: decimal with trailing dot, bold in `ink`, runs into its paragraph and ends with a colon: `6.2.1. Necesidades locales:`. Pass the paragraph as children.
-- Consumer provides `number` without the separator and `title` in the right case. Leave one `space-line` above levels 1 and 2.
+- Nivel 1 (capítulo): número romano + `.-`, en mayúsculas, estilo `section`: `V.- MERCADO EDUCATIVO`.
+- Nivel 2: número decimal + `.-`, en tipo oración, estilo `subsection`, con sangría `indent-1`: `5.1.- Demanda educativa`.
+- Nivel 3: número decimal con punto final, en negrita y `ink`, en línea con su párrafo y terminado en dos puntos: `6.2.1. Necesidades locales:`. El párrafo se pasa como hijo (children).
+- Quien lo usa proporciona `number` sin el separador y `title` con las mayúsculas correctas. Dejar un `space-line` sobre los niveles 1 y 2.

@@ -1,7 +1,7 @@
-A numbered data table with its caption above and its source below, the report's main evidence device.
+Una tabla de datos numerada con su título encima y su fuente debajo: el principal recurso de evidencia del informe.
 
-- Consumer provides `number`, `title`, `columns` (the first is the row-label column, often "Concepto"), `rows` as preformatted strings, and `source` (the dataset and years, without "Fuente: ").
-- Mark projected columns with `*` in the header and add the explanation to `notes`.
-- `tone="head"` (default) fills the header row with `table-head`; use `tone="band"` for text-heavy matrices such as the Certificaciones progresivas table.
-- Keep the source's number formatting (`1,280,594`, `63.1%`). Figures are right-aligned and tabular. Tables may be narrower than the text column and are centered in it.
-- Never omit the Fuente line. Own calculations read "Fuente: Elaboración propia".
+- Quien la usa proporciona `number`, `title`, `columns` (la primera es la columna de etiquetas, a menudo «Concepto»), `rows` como cadenas ya formateadas y `source` (la base de datos y los años, sin «Fuente: »).
+- Marcar las columnas proyectadas con `*` en el encabezado y poner la explicación en `notes`.
+- `tone="head"` (por defecto) rellena la fila de encabezado con `table-head`; usar `tone="band"` en matrices con mucho texto, como la tabla de Certificaciones progresivas.
+- Conservar el formato numérico de la fuente (`1,280,594`, `63.1%`). Las cifras van alineadas a la derecha y tabulares. Las tablas pueden ser más angostas que la columna de texto y se centran en ella.
+- Nunca omitir la línea de Fuente. Los cálculos propios dicen «Fuente: Elaboración propia».
