@@ -72,7 +72,7 @@ Para el análisis del mercado educativo y el mercado laboral de la carrera de Fa
 
 Respecto de las fuentes, se realizó una revisión documentaria de información oficial: INEI (censos, proyecciones, ENAHO, ENDES y avance económico departamental), BCRP (caracterización departamental y síntesis de actividad económica), DIGEMID/MINSA (boletines y Registro Nacional de Establecimientos Farmacéuticos), GERESA Lambayeque, MTPE (demanda de ocupaciones e indicadores laborales), PRODUCE (diagnóstico productivo regional), SUNEDU (licenciamiento) y EsSalud.
 
-La demanda se calcula con la misma lógica del informe de referencia: (1) población objetivo = población de Lambayeque de los NSE B, C y D, de 16 a 25 años, que cursa 5.° de secundaria o tiene secundaria completa sin estudios superiores; (2) demanda educativa = población objetivo × porcentaje interesado en estudiar Farmacia y Bioquímica (encuesta propia); (3) brecha = demanda educativa − oferta (ingresantes anuales de las universidades licenciadas que ofrecen la carrera en la región).
+La demanda se calcula con la misma lógica del informe de referencia: (1) población objetivo = jóvenes de 15 a 29 años de Lambayeque de los NSE B, C y D que no se encuentran cursando estudios superiores; (2) demanda educativa = población objetivo × porcentaje interesado en estudiar Farmacia y Bioquímica (encuesta propia); (3) brecha = demanda educativa − oferta (ingresantes anuales de las universidades licenciadas que ofrecen la carrera en la región).
 
 ## V.- MERCADO EDUCATIVO
 
@@ -86,14 +86,14 @@ La demanda formativa se refiere al interés o la necesidad que tienen tanto indi
 
 Para la estimación se utilizan fuentes oficiales y de mercado disponibles. Dado que no se cuenta aún con una encuesta propia de intención vocacional, las cifras de las Tablas 1 a 4 son **estimaciones referenciales** construidas con supuestos explícitos, que deberán reemplazarse con los resultados de dicha encuesta [VERIFICAR].
 
-**Tabla 1. Población de Lambayeque según nivel socioeconómico**
+**Tabla 1. Distribución de la población según nivel socioeconómico (APEIM 2025)**
 
-| Concepto | NSE AB | NSE C | NSE D | NSE E | Total |
-|---|---|---|---|---|---|
-| Estructura socioeconómica (%) | 10,5 | 23,8 | 30,7 | 35,0 | 100,0 |
-| Población estimada 2024 (hab.) | 142 401 | 322 776 | 416 354 | 474 671 | 1 356 202 |
+| Concepto | NSE A | NSE B | NSE C | NSE D | NSE E | Total |
+|---|---|---|---|---|---|---|
+| Distribución de hogares, Perú (%) | 1,0 | 9,4 | 28,1 | 31,3 | 30,2 | 100,0 |
+| Aplicada a Lambayeque, 2024 (hab.) | 13 562 | 127 483 | 381 093 | 424 491 | 409 573 | 1 356 202 |
 
-*Fuente: población total, PRODUCE (2025) sobre INEI; estructura NSE, CPI (en SINEACE, Caracterización de la región Lambayeque). La estructura NSE corresponde a una medición anterior; actualizar con CPI "Perú: Población 2024" [VERIFICAR].*
+*Fuente: APEIM, Niveles Socioeconómicos 2025 (data ENAHO 2024), p. 17; población total, PRODUCE (2025). La síntesis de APEIM solo publica Lima Metropolitana y Perú total; se aplica la distribución nacional a Lambayeque. Actualizar con el informe completo de APEIM, que incluye el desagregado por departamento [VERIFICAR].*
 
 **Tabla 2. Jóvenes de 15 a 29 años de Lambayeque según condición de estudio y trabajo, 2024**
 
@@ -105,17 +105,17 @@ Para la estimación se utilizan fuentes oficiales y de mercado disponibles. Dado
 | No estudian ni trabajan (NINI) | 19,7 | 65 097 |
 | Total jóvenes de 15 a 29 años | 100,0 | 330 674 |
 | Jóvenes que no estudian (solo trabajan + NINI) | 62,0 | 205 018 |
-| Jóvenes que no estudian, en NSE C y D (54,5 %) | – | 111 735 |
+| Jóvenes que no estudian, en NSE B, C y D (68,8 %) | – | 141 052 |
 
-*Fuente: INEI – ENAHO 2024, en GRTPE–OSEL Lambayeque, Mercado laboral de los jóvenes en la región Lambayeque (2025), p. 56; NSE, CPI. Elaboración propia para las dos últimas filas.*
+*Fuente: INEI – ENAHO 2024, en GRTPE–OSEL Lambayeque, Mercado laboral de los jóvenes en la región Lambayeque (2025), p. 56; NSE, APEIM 2025. Elaboración propia para las dos últimas filas.*
 
-La población objetivo se aproxima con los jóvenes de 15 a 29 años que no estudian, es decir, los que solo trabajan o no estudian ni trabajan (NINI), pertenecientes a los NSE C y D. Este grupo corresponde al criterio de no estar cursando estudios superiores. Cabe resaltar que Lambayeque ocupa el **cuarto lugar nacional en proporción de jóvenes NINI (19,7 %)**, con 65 097 jóvenes en esa condición en 2024 (OSEL, 2025, pp. 54-56), lo que evidencia la necesidad de ampliar la oferta formativa pertinente.
+La población objetivo se aproxima con los jóvenes de 15 a 29 años que no estudian, es decir, los que solo trabajan o no estudian ni trabajan (NINI), pertenecientes a los NSE B, C y D. Este grupo corresponde al criterio de no estar cursando estudios superiores. Cabe resaltar que Lambayeque ocupa el **cuarto lugar nacional en proporción de jóvenes NINI (19,7 %)**, con 65 097 jóvenes en esa condición en 2024 (OSEL, 2025, pp. 54-56), lo que evidencia la necesidad de ampliar la oferta formativa pertinente.
 
 **Tabla 3. Población objetivo proyectada (2027-2033)**
 
 |  | 2027 | 2028 | 2029 | 2030 | 2031 | 2032 | 2033 |
 |---|---|---|---|---|---|---|---|
-| Población objetivo proyectada | 110 938 | 110 674 | 110 410 | 110 147 | 109 885 | 109 623 | 109 362 |
+| Población objetivo proyectada | 140 047 | 139 713 | 139 380 | 139 048 | 138 717 | 138 387 | 138 057 |
 
 *Fuente: elaboración propia. Proyección con la variación de la población de 15 a 29 años de Lambayeque 2024-2025 estimada por el INEI (−0,24 % anual; 309 375 a 308 638 jóvenes; SIRTOD, en OSEL 2025, p. 14).*
 
@@ -123,9 +123,9 @@ La población objetivo se aproxima con los jóvenes de 15 a 29 años que no estu
 
 | Escenario de interés | 2027 | 2028 | 2029 | 2030 | 2031 | 2032 | 2033 |
 |---|---|---|---|---|---|---|---|
-| Conservador (1 %) | 1 109 | 1 107 | 1 104 | 1 101 | 1 099 | 1 096 | 1 094 |
-| Medio (2 %) | 2 219 | 2 213 | 2 208 | 2 203 | 2 198 | 2 192 | 2 187 |
-| Alto (3 %) | 3 328 | 3 320 | 3 312 | 3 304 | 3 297 | 3 289 | 3 281 |
+| Conservador (1 %) | 1 400 | 1 397 | 1 394 | 1 390 | 1 387 | 1 384 | 1 381 |
+| Medio (2 %) | 2 801 | 2 794 | 2 788 | 2 781 | 2 774 | 2 768 | 2 761 |
+| Alto (3 %) | 4 201 | 4 191 | 4 181 | 4 171 | 4 162 | 4 152 | 4 142 |
 
 *Fuente: elaboración propia. Los escenarios se acotan con dos referencias: a nivel nacional, el 2,6 % de la población de 17 años a más que estudió o estudia educación superior no universitaria eligió carreras relacionadas con Farmacia y Bioquímica en 2018 (INEI, Indicadores de Educación por Departamentos 2008-2018, cap. 5, p. 8); y en el estudio DQE Norte 2025 de Arellano, Medicina concentra el 13 % de las preferencias y Farmacia no figura entre las cinco primeras (< 6 %). Reemplazar por la tasa de interés efectivo de la encuesta propia (Anexo) [VERIFICAR].*
 
@@ -133,7 +133,7 @@ La población objetivo se aproxima con los jóvenes de 15 a 29 años que no estu
 
 Los datos sobre la preferencia vocacional y el posicionamiento institucional se sustentan en tres fuentes principales del sector educativo y laboral peruano:
 
-**a) Arellano Consultoría – estudio "Dónde Quiero Estudiar (DQE) Norte y Sur 2025: Pregrado universidades".** Es la primera edición del estudio y recoge la opinión de jóvenes de 15 a 23 años egresados o por egresar del colegio en los principales departamentos del norte (Piura, La Libertad, **Lambayeque** y Áncash; 1 264 casos) y del sur. En el norte, las primeras opciones de carrera son Medicina (13 %), Derecho (13 %), Administración de Empresas (11 %), Ingeniería Civil (9 %) e Ingeniería de Sistemas (6 %), lo que confirma que las ciencias de la salud encabezan la preferencia vocacional. Los jóvenes priorizan las oportunidades laborales, una carrera bien remunerada y una amplia variedad de cursos o campos de especialización. En Chiclayo, la UTP figura en el primer lugar de preferencia, asociada a la búsqueda de rápida inserción laboral, infraestructura moderna (laboratorios) y pensiones escalonadas. [VERIFICAR] Cifras tomadas de la difusión del estudio en Gestión y en medios institucionales; adjuntar el informe de Arellano.
+**a) Arellano Consultoría – estudio "Dónde Quiero Estudiar (DQE) – Universidades Norte".** Analiza las necesidades, motivaciones, expectativas, barreras y atributos que influyen en la elección de una universidad, así como indicadores de marca (recordación, consideración, preferencia, prestigio y confianza), con cobertura en Trujillo, Piura, Chiclayo y Chimbote. En la edición 2025, la UTP fue la primera opción para el 19 % de los potenciales universitarios encuestados de la zona norte, seguida por la UCV (16 %) y la UPAO (14 %); su preferencia fue especialmente relevante entre jóvenes de Piura, Lambayeque y Áncash. Entre las primeras opciones de carrera en el norte figuran Medicina (13 %), Derecho (13 %), Administración de Empresas (11 %), Ingeniería Civil (9 %) e Ingeniería de Sistemas (6 %). La encuesta consideró jóvenes de 15 a 23 años (estudiantes de cuarto y quinto de secundaria y egresados) de los NSE A, B, C y D con intención de estudiar una carrera universitaria; 1 264 casos en la zona norte (Piura, La Libertad, Lambayeque y Áncash); cuestionarios digitales estructurados aplicados mediante panel; y trabajo de campo del 23 de septiembre al 31 de octubre de 2025 (Gestión, sobre Arellano). **Precisiones:** los porcentajes corresponden a la zona norte en conjunto y no a Chiclayo en particular; y las fuentes públicas no permiten atribuir la preferencia por la UTP a atributos específicos, lo que requeriría el informe completo de Arellano o su ficha técnica oficial. Estos resultados muestran que la demanda universitaria del norte es sensible a la oferta privada con posicionamiento regional, espacio en el que la USS compite como la universidad de mayor matrícula de Lambayeque.
 
 **b) Oferta universitaria reciente (portales de transparencia) y portal "Mi Carrera" (MTPE).** La UTP abrió la carrera de Farmacia y Bioquímica en 2025 y en su primer año registró **276 postulantes y 240 ingresantes** a nivel nacional (201 y 186 en 2025-1; 75 y 54 en 2025-2), con **158 matriculados** en 2025-I y 144 en 2025-II (UTP, Postulantes e ingresantes pregrado 2022-2025, pp. 1 y 3). Ello evidencia una demanda efectiva inmediata por la carrera. Complementariamente, el portal **Mi Carrera del MTPE** ubica a **Farmacia en el sexto lugar entre las 30 familias de carreras universitarias más demandadas en Lambayeque**, después de Sistemas y Cómputo, Contabilidad e Impuestos, Enfermería, Educación Primaria y Educación Inicial [VERIFICAR] (registrar fecha de consulta). Las ciencias de la salud (Enfermería y Farmacia) aparecen así entre las seis familias con mayor demanda en la región.
 
@@ -152,7 +152,7 @@ En la región Lambayeque, la oferta licenciada de Farmacia y Bioquímica es redu
 | Privada | Universidad Tecnológica del Perú (UTP) – Chiclayo | Licenciada | Sí, desde 2025 |
 | Pública | Universidad Nacional Pedro Ruiz Gallo (UNPRG) | Licenciada (2023) | No ofrece |
 | Privada | Universidad Señor de Sipán (USS) | Licenciada | No ofrece (programa propuesto) |
-| Privada | USAT, UCV y USMP (filial Chiclayo) | Licenciadas | No identificada [VERIFICAR] |
+| Privada | USAT, UCV y USMP (filial Chiclayo) | Licenciadas | No ofrecen |
 | Privada | Universidad de Chiclayo (UDCH) | Denegada | Ofrecía – en cese |
 | Privada | Universidad de Lambayeque (UDL) | Denegada | En cese |
 | Privada | Universidad Privada Juan Mejía Baca (UMB) | Denegada | En cese |
@@ -175,13 +175,13 @@ Para estimar la oferta educativa se utilizan las estadísticas publicadas en el 
 
 | Concepto | 2027 | 2028 | 2029 | 2030 | 2031 | 2032 | 2033 |
 |---|---|---|---|---|---|---|---|
-| Demanda educativa proyectada (2 %) | 2 219 | 2 213 | 2 208 | 2 203 | 2 198 | 2 192 | 2 187 |
+| Demanda educativa proyectada (2 %) | 2 801 | 2 794 | 2 788 | 2 781 | 2 774 | 2 768 | 2 761 |
 | Oferta educativa proyectada (tope) | 240 | 240 | 240 | 240 | 240 | 240 | 240 |
-| Brecha demanda/oferta | 1 979 | 1 973 | 1 968 | 1 963 | 1 958 | 1 952 | 1 947 |
+| Brecha demanda/oferta | 2 561 | 2 554 | 2 548 | 2 541 | 2 534 | 2 528 | 2 521 |
 
 *Fuente: elaboración propia (Tabla 4 − Tabla 6). La oferta se mantiene constante en el total de ingresantes 2025 de la UTP (tope superior).*
 
-Aun con el escenario conservador (1 % de interés) y tomando como oferta regional el total nacional de ingresantes de la UTP, para 2027 habría una brecha de alrededor de 870 jóvenes interesados en estudiar Farmacia y Bioquímica que no encontrarían una vacante en una universidad licenciada de la región. En el escenario medio, la brecha se acerca a los 2 000 jóvenes por año.
+Aun con el escenario conservador (1 % de interés) y tomando como oferta regional el total nacional de ingresantes de la UTP, para 2027 habría una brecha de alrededor de 1 160 jóvenes interesados en estudiar Farmacia y Bioquímica que no encontrarían una vacante en una universidad licenciada de la región. En el escenario medio, la brecha supera los 2 500 jóvenes por año.
 
 ## VI.- JUSTIFICACIÓN DE LA CREACIÓN DEL PROGRAMA
 
@@ -411,7 +411,7 @@ El presente informe técnico sustenta la pertinencia de crear el programa de est
 
 Lambayeque presenta un entorno económico favorable: aporta el 2,7 % del PBI nacional, creció 5,2 % en 2024, cuenta con 79 085 MYPE (89 % en comercio y servicios) y una cartera de inversión superior a S/ 8 800 millones que incluye proyectos de salud. La USS cuenta con sede en la región, respaldo financiero y experiencia en ciencias de la salud.
 
-La estimación referencial de demanda muestra una brecha de entre 900 y 3 200 jóvenes por año según el escenario (Tablas 4 y 7). La viabilidad final depende de validar esa estimación con una encuesta propia de intención vocacional y de la confirmación de la inversión en laboratorios y de la plana docente [DATO PENDIENTE].
+La estimación referencial de demanda muestra una brecha de entre 1 100 y 4 000 jóvenes por año según el escenario (Tablas 4 y 7). La viabilidad final depende de validar esa estimación con una encuesta propia de intención vocacional y de la confirmación de la inversión en laboratorios y de la plana docente [DATO PENDIENTE].
 
 ## ANEXO. ENCUESTA DE INTENCIÓN VOCACIONAL
 
@@ -444,12 +444,13 @@ Para validar la demanda educativa se propone aplicar una encuesta a estudiantes 
 - INEI (2019). Perú: Indicadores de Educación por Departamentos, 2008-2018. Capítulo 5: Profesiones o carreras universitarias.
 - Villalobos Véliz, L. del C., Hernández Fernández, B., et al. (2026). Orientación vocacional en escolares: diseño y validación de un instrumento diagnóstico. Areté, Revista Digital del Doctorado en Educación, 12(23).
 - Gerencia Regional de Educación Lambayeque. Plataforma "Mi Carrera en tu Cole".
-- CPI. Estructura socioeconómica de Lambayeque (citado en SINEACE, Caracterización de la región Lambayeque).
 - INEI (2018). Resultados definitivos de los Censos Nacionales 2017 – Lambayeque.
 - GERESA Lambayeque. Notas de prensa sobre operativos contra medicamentos falsificados.
 - SUNEDU. Resoluciones de licenciamiento institucional (Universidad de Chiclayo, Universidad de Lambayeque, Universidad Juan Mejía Baca, UNPRG).
 - EsSalud. Anuncios de construcción de hospitales en Lambayeque.
-- Arellano Consultoría (2025). Dónde Quiero Estudiar (DQE) Norte y Sur 2025: Pregrado universidades (difusión en Gestión) [informe completo por adjuntar].
+- Arellano Consultoría (2025). Dónde Quiero Estudiar (DQE) – Universidades Norte. arellano.pe/donde-quiero-estudiar.
+- Gestión (2025). UTP y UCV se pelean alumnado en el norte: así ciudades se reparten las preferencias.
+- APEIM (2025). Niveles Socioeconómicos 2025 (data ENAHO 2024). Lima, noviembre 2025.
 - MTPE/MINEDU. Portal "Ponte en Carrera".
 - Congreso de la República. Ley N.° 29459 – Ley de los Productos Farmacéuticos, Dispositivos Médicos y Productos Sanitarios; Ley N.° 30220 – Ley Universitaria.
 
