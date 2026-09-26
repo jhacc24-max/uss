@@ -1,0 +1,1 @@
+`extract_pdf_styles.py` lists the fonts, text colours, font sizes and drawing fills of every PDF in the repository. Those counts are the evidence behind `../tokens.json`. Run it from the repository root after `pip install pymupdf`.

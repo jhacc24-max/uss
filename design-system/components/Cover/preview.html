@@ -1,0 +1,52 @@
+<!-- @dsCard height=288 -->
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Pertinencia</title>
+<style>
+  html, body { margin:0; height:100%; }
+  body { background:var(--paper); color:var(--ink); font-family:var(--font-body); overflow:hidden; }
+  .cover { position:relative; height:288px; overflow:hidden; }
+  .art { position:absolute; top:0; left:480px; width:480px; height:288px; overflow:hidden; }
+  .art svg { display:block; width:480px; height:288px; }
+  .head { fill:var(--table-head); }
+  .band { fill:var(--band); }
+  .slate { fill:var(--slate); }
+  .deep { fill:var(--slate-deep); }
+  .folio { fill:var(--folio); }
+  .blk { rx:var(--radius-none); }
+  .hair { stroke:var(--rule); stroke-width:var(--hairline); fill:none; }
+  .words { position:absolute; left:40px; bottom:40px; max-width:440px; }
+  .name { margin:0; font-size:64px; line-height:.95; font-weight:700; color:var(--slate-deep); }
+  .tag { margin:var(--space-2) 0 0 2px; font-size:14px; line-height:20px; color:var(--slate); }
+</style>
+</head>
+<body>
+<div class="cover">
+<div class="art" aria-hidden="true">
+<svg viewBox="0 0 480 288" width="480" height="288">
+<!--
+  blocks      table-head 176×176 (the identity colour, largest) · band 144×72 · slate 144×96 · slate-deep 104×232 bleeding right and bottom · folio 64×24 once, as the stamp — ≈29% of 960×288
+  arrangement cells of the controlled-document header grid: blocks sit inside the columns and rows the rules define, three bleeding off the bottom edge like a table running onto the next page
+  pattern     hairlines, from "Borders are hairline in rule… nothing else is boxed": four 0.5pt rules (two rows, two columns) that echo the header block's grid
+  scales      sides in space-2 (8px) multiples; gutters space-2; corners radius-none; rules hairline
+-->
+<line class="hair" x1="0" y1="48" x2="480" y2="48"/>
+<line class="hair" x1="0" y1="104" x2="480" y2="104"/>
+<line class="hair" x1="208" y1="0" x2="208" y2="288"/>
+<line class="hair" x1="368" y1="0" x2="368" y2="288"/>
+<rect class="head blk" x="24" y="112" width="176" height="176"/>
+<rect class="band blk" x="216" y="112" width="144" height="72"/>
+<rect class="slate blk" x="216" y="192" width="144" height="96"/>
+<rect class="deep blk" x="376" y="56" width="104" height="232"/>
+<rect class="folio blk" x="392" y="16" width="64" height="24"/>
+</svg>
+</div>
+<div class="words">
+<h1 class="name">Pertinencia</h1>
+<p class="tag">Institutional technical reports on A4: ruled, sourced and folioed.</p>
+</div>
+</div>
+</body>
+</html>
