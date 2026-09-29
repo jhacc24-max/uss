@@ -25,8 +25,9 @@ Generado con `build/extract.py` → `calc.py` → `build.py` (plantilla: informe
 
 ## Tablas 1-3 y 20 (SIAGIE 2025)
 - Tabla 1 y Tabla 20 se recalcularon con la matrícula 2025. Tabla 2: Wh = Ni/N; n = N·z²·ΣWhPhQh / (N·e² + z²·ΣWhPhQh) con z = 1.96 y e = 3.985 % (error del informe original, ≈ 4 %; n0 = 605), lo que da n = 588, igual que en los informes originales; ni por estrato con el método del mayor resto. Tabla 3 sale de la Tabla 2.
-- La imagen de la fórmula (n0 = 605, n = 584) es la del informe original y no se modificó; su «584» no coincide con el 588 de la Tabla 2 en el original.
+- La imagen de la fórmula (recuadros de texto n0 = 605, n = 588, V = 0.000413375, e = 0.03985, Z = 1.96) coincide con la Tabla 2 (588). Corrección: en una versión previa del informe se indicó por error que la imagen mostraba 584; era un efecto de un reemplazo automático intermedio. Se agregó bajo la imagen una línea con N = 21 255, ΣWhPhQh, e, Z, V, n0 y n.
 
 ## Pendiente de verificar
-- Figura 3 (instituciones de educación superior por provincia) se mantiene como en los informes originales (ESCALE/carreras.pe no accesibles desde el entorno).
+- Figura 3: datos aportados por el usuario (oferta 2026 de institutos): provincia de Chiclayo 6 (Manuel Mesones Muro – Master System, Pedro Cieza de León, Santa María Mazzarello – ISMA, Cayetano Heredia, ICH y, en Pimentel, Instituto Politécnico); Lambayeque y Ferreñafe 0.
+- «Fuentes consultadas» (pág. 9) actualizadas a las fuentes efectivamente usadas.
 - Listado de universidades que ofrecen Farmacia y Bioquímica (sección 2.2): referencial, no exhaustivo.

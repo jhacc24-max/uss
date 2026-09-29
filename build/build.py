@@ -258,6 +258,46 @@ for j,nm in enumerate(privs):
 set_p(find_p(B,'La región Lambayeque no cuenta con universidades'),
  'En la región Lambayeque, solo la Universidad Tecnológica del Perú (UTP), sede Chiclayo, ofrece la carrera de Farmacia y Bioquímica desde el año 2025. No la ofrecen la Universidad Nacional Pedro Ruiz Gallo, la Universidad Católica Santo Toribio de Mogrovejo, la Universidad Señor de Sipán, la Universidad César Vallejo ni la Universidad San Martín de Porres (filial Chiclayo). La Universidad Alas Peruanas ofreció la carrera hasta el 2019, año en que cerró por no obtener el licenciamiento institucional. Este listado es referencial y no exhaustivo de la oferta nacional.')
 
+
+
+replace_all(B,'Población de nivel socioeconómico B y C a nivel regional','Población de nivel socioeconómico AB y C a nivel regional')
+cb=find_p(B,'Cabe indicar')
+nf=copy.deepcopy(cb); cb.addprevious(nf)
+V_=(e_/z)**2; n0_=sumW/V_
+set_p(nf,f'Donde N = {sp(Npop)} estudiantes de 5to de secundaria (SIAGIE, Reporte de Matrícula 2025), ΣWhPhQh = {sumW:.2f}, e = {e_} (≈ 4%) y Z = {z} (95% de confianza), con lo cual V = {V_:.9f}, n0 = {n0_:.1f} ≈ {round(n0_)} y n = {N} estudiantes.')
+
+# ---------- Figura 3 (institutos, oferta 2026) ----------
+replace_all(B,'Instituciones de educación superior según distritos.','Instituciones de educación superior según provincias de la Región Lambayeque, 2026.')
+set_p(find_p(B,'En la figura 3, el distrito'),
+ 'En la figura 3, la provincia de Chiclayo concentra el 100% de las instituciones de educación superior con oferta verificable en 2026 (6 instituciones): Manuel Mesones Muro – Master System, Pedro Cieza de León, Santa María Mazzarello – ISMA, Cayetano Heredia e ICH, además del Instituto Politécnico en el distrito de Pimentel. En las provincias de Lambayeque y Ferreñafe no se encontró oferta verificable en 2026 (0%).')
+# ---------- Fuentes consultadas (pág. 9) ----------
+FUENTES=[
+ 'APEIM (2025). Niveles Socioeconómicos 2025 – Informe completo (data ENAHO 2024). Lima.',
+ 'BCRP – Sucursal Piura (2025). Caracterización del departamento de Lambayeque.',
+ 'Colegio Químico Farmacéutico Departamental de Lambayeque (2024). Memoria de Gestión, Consejo Directivo 2023-2024.',
+ 'CPI Research (2025). Market Report N° 003 – Proyecciones Poblacionales 2025.',
+ 'DIGEMID/MINSA (2026). Establecimientos farmacéuticos privados autorizados hasta el 30 de junio de 2026 (Boletín N° 11).',
+ 'Ficha de Diagnóstico Lambayeque 2024 (22 de enero de 2025).',
+ 'GRTPE – OSEL Lambayeque (2025). Mercado laboral de los jóvenes en la región Lambayeque (ENAHO 2024 y SIRTOD-INEI).',
+ 'INEI (2018). Censos Nacionales 2017: XII de Población, VII de Vivienda y III de Comunidades Indígenas.',
+ 'Ley N.° 29459 (2009). Ley de los Productos Farmacéuticos, Dispositivos Médicos y Productos Sanitarios; D.S. N.° 014-2011-SA, Reglamento de Establecimientos Farmacéuticos.',
+ 'MINEDU (2025). SIAGIE – Reporte de Matrícula 2025.',
+ 'MTPE (2024). Demanda de ocupaciones en Lambayeque 2024 – Encuesta de Demanda Ocupacional (EDO).',
+ 'MTPE – OSEL Lambayeque (2024). Tríptico N° 02-2024: Lambayeque.',
+ 'SUNEDU. Resoluciones de licenciamiento institucional y portal de programas licenciados.',
+ 'Universidad Tecnológica del Perú (2025). Postulantes, ingresantes, matriculados y egresados pregrado 2022-2025 (datos al 31.10.2025).',
+ 'Universidad Señor de Sipán – Área de Investigación de Mercado (2023). Encuesta a estudiantes de 5to año de secundaria de la Región Lambayeque (julio-setiembre 2023) e informes de Demanda Social de Laboratorio Clínico, Radiología y Terapia Física y Rehabilitación.',
+ 'Portales institucionales de institutos y universidades de las provincias de Chiclayo, Lambayeque y Ferreñafe (2026).',
+]
+old=find_p(B,'INEI (2013 - 2018)')
+sib=[old]; nx=old.getnext()
+while nx is not None and nx.tag==W+'p' and len(sib)<12: sib.append(nx); nx=nx.getnext()
+assert ptext(sib[-1]).startswith('CEPLAN (2019) Perú'),ptext(sib[-1])
+for q,tx in zip(sib,FUENTES): set_p(q,tx)
+last=sib[-1]
+for tx in FUENTES[len(sib):]:
+    new=copy.deepcopy(sib[-1]); last.addnext(new); set_p(new,tx); last=new
+
 # ---------- guardar y post-procesar (gráficos, miniatura) ----------
 TMP='tmp_out.docx'
 d.core_properties.title='Demanda Social del Programa de Farmacia y Bioquímica de la Universidad Señor de Sipán -2026'
@@ -284,6 +324,18 @@ def set_chart(xml,cats,vals):
     xml=xml.replace(val,nv)
     return xml.encode('utf8')
 files['word/charts/chart1.xml']=set_chart(files['word/charts/chart1.xml'],['Si','No'],[si/100,no/100])
+def fix_chart3(xml):
+    x=xml.decode('utf8')
+    v=re.search(r'<c:val>.*?</c:val>',x,re.S).group(0)
+    nv=v
+    for i,val in enumerate(['6','0','0']):
+        nv=re.sub(rf'(<c:pt idx="{i}">\s*<c:v>).*?(</c:v>)',lambda m:m.group(1)+val+m.group(2),nv,count=1,flags=re.S)
+    x=x.replace(v,nv)
+    # ocultar rótulos de las porciones con 0 %
+    for i in (1,2):
+        x=re.sub(rf'<c:dLbl><c:idx val="{i}"/>.*?</c:dLbl>',f'<c:dLbl><c:idx val="{i}"/><c:delete val="1"/></c:dLbl>',x,count=1,flags=re.S)
+    return x.encode('utf8')
+files['word/charts/chart3.xml']=fix_chart3(files['word/charts/chart3.xml'])
 files['word/charts/chart2.xml']=set_chart(files['word/charts/chart2.xml'],cats,[p/100 for p in p6])
 # quitar miniatura antigua (mostraba la carátula anterior)
 files.pop('docProps/thumbnail.emf',None)
