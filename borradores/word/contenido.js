@@ -150,6 +150,7 @@ module.exports = {
         ['Privada', 'Universidad de Chiclayo (UDCH)', 'Denegada', 'Ofrecía – en cese'],
         ['Privada', 'Universidad de Lambayeque (UDL)', 'Denegada', 'En cese'],
         ['Privada', 'Universidad Privada Juan Mejía Baca (UMB)', 'Denegada', 'En cese'],
+        ['Privada', 'Universidad Alas Peruanas (UAP) – filial Chiclayo', 'Denegada', 'Ofreció la carrera hasta 2019 – cerrada'],
       ],
       widths: [900, 3700, 1700, 2000], firstColLeft: false,
       fuente: 'Fuente: SUNEDU; INEI – Compendio Estadístico Lambayeque 2024 (6 universidades licenciadas); OSEL (2025), pp. 47-50, que lista los graduados de la UNPRG por escuela profesional sin incluir Farmacia; portales institucionales.',
@@ -164,7 +165,7 @@ module.exports = {
         ['Matriculados', '158', '144', '–'],
       ],
       widths: [3400, 1600, 1600, 1600],
-      fuente: `Fuente: UTP, Postulantes, ingresantes, matriculados y egresados pregrado 2022-2025 (datos al 31.10.2025), pp. 1 y 3. Falta el desagregado de la sede Chiclayo ${P}.`,
+      fuente: `Fuente: UTP, Postulantes, ingresantes, matriculados y egresados pregrado 2022-2025 (datos al 31.10.2025), pp. 1 y 3. La UTP publica sus cifras consolidadas para todas sus sedes, sin desagregado por sede; por ello, el total se toma como tope superior de la oferta en Chiclayo.`,
     } },
     { table: {
       titulo: 'Tabla 7. Brecha entre demanda y oferta educativa en Lambayeque (escenario medio)',
@@ -176,6 +177,20 @@ module.exports = {
       ],
       widths: [2700, 820, 820, 820, 820, 820, 820, 820],
       fuente: 'Fuente: elaboración propia (Tabla 4 − Tabla 6). La oferta se mantiene constante en el total de ingresantes 2025 de la UTP (tope superior).',
+    } },
+    { p: 'Como referencia histórica de la demanda regional, la **Universidad Alas Peruanas (UAP) ofreció la carrera de Farmacia y Bioquímica en su filial Chiclayo hasta diciembre de 2019**, cuando cerró al no obtener el licenciamiento de la SUNEDU. En ese año, el programa funcionaba con aproximadamente **4 aulas de 30 estudiantes por ciclo (unos 120 estudiantes por ciclo)** y había llegado hasta el octavo ciclo, con un total aproximado de **960 estudiantes** de Farmacia en Chiclayo (Tabla 6A). Es decir, una sola universidad no licenciada captaba alrededor de 120 estudiantes por ciclo en Chiclayo, cifra comparable a la de la UTP en todo el país en su primer año (240 ingresantes en 2025). Con su cierre, esa demanda quedó sin oferta local durante cinco años, hasta la apertura de la carrera en la UTP.' },
+    { table: {
+      titulo: 'Tabla 6A. Referencia histórica: Farmacia y Bioquímica en la UAP – filial Chiclayo, 2019',
+      head: ['Concepto', 'Valor aproximado'],
+      rows: [
+        ['Aulas por ciclo', '4'],
+        ['Estudiantes por aula', '30'],
+        ['Estudiantes por ciclo', '120'],
+        ['Ciclos en funcionamiento (del 1.° al 8.°)', '8'],
+        ['Total de estudiantes de Farmacia (diciembre 2019)', '960'],
+      ],
+      widths: [5200, 3000],
+      fuente: 'Fuente: información proporcionada por el Programa Académico sobre la filial Chiclayo de la UAP (estimación aproximada, sin registro oficial publicado). La UAP cesó sus actividades en diciembre de 2019 por denegatoria de la licencia institucional de la SUNEDU.',
     } },
     { p: 'Aun con el escenario conservador (1 % de interés) y tomando como oferta regional el total nacional de ingresantes de la UTP, para 2027 habría una brecha de alrededor de 1 360 jóvenes interesados en estudiar Farmacia y Bioquímica que no encontrarían una vacante en una universidad licenciada de la región. En el escenario medio, la brecha se acerca a los 3 000 jóvenes por año.' },
     { h1: 'VI.- JUSTIFICACIÓN DE LA CREACIÓN DEL PROGRAMA' },
@@ -261,7 +276,7 @@ module.exports = {
     { p: 'A mediados de 2024, ProInversión identificó **31 proyectos en la región por más de S/ 8 800 millones**, orientados a transporte, energía, **salud**, irrigación, vivienda e industria, entre ellos el parque industrial de Reque, de aproximadamente 3 000 hectáreas (BCRP, Caracterización, p. 11). La implementación de un programa de Farmacia y Bioquímica puede contribuir significativamente a mejorar el acceso a medicamentos seguros y de calidad, a la formalización del comercio farmacéutico y al desarrollo de la agroindustria y la industria regional de productos naturales.' },
 
     { h2: '6.3. Análisis de la viabilidad del programa' },
-    { p: `De las universidades y programas de formación universitaria en el departamento de Lambayeque, existen 6 universidades licenciadas (UNPRG, USAT, USS, UCV, UTP y USMP) con más de 125 programas de estudio y 96 355 matriculados en 2023; la **USS es la universidad con mayor matrícula de la región (37 517 estudiantes en 2023)** (INEI, Compendio Estadístico Lambayeque 2024, en OSEL 2025, pp. 47-49). La única universidad licenciada identificada con Farmacia y Bioquímica es la UTP en Chiclayo, que abrió la carrera recién en 2025 (240 ingresantes en todas sus sedes); la UNPRG no la ofrece. Las universidades que ofrecían la carrera sin licencia (Universidad de Chiclayo) o que operaban en la región sin licencia (Universidad de Lambayeque y Universidad Juan Mejía Baca) se encuentran en cese, lo que deja una demanda regional desatendida y estudiantes que se trasladan a otras ciudades.` },
+    { p: `De las universidades y programas de formación universitaria en el departamento de Lambayeque, existen 6 universidades licenciadas (UNPRG, USAT, USS, UCV, UTP y USMP) con más de 125 programas de estudio y 96 355 matriculados en 2023; la **USS es la universidad con mayor matrícula de la región (37 517 estudiantes en 2023)** (INEI, Compendio Estadístico Lambayeque 2024, en OSEL 2025, pp. 47-49). La única universidad licenciada identificada con Farmacia y Bioquímica es la UTP en Chiclayo, que abrió la carrera recién en 2025 (240 ingresantes en todas sus sedes); la UNPRG no la ofrece. Las universidades que ofrecían la carrera sin licencia (Universidad Alas Peruanas – filial Chiclayo, cerrada en 2019, y Universidad de Chiclayo) o que operaban en la región sin licencia (Universidad de Lambayeque y Universidad Juan Mejía Baca) se encuentran en cese, lo que deja una demanda regional desatendida y estudiantes que se trasladan a otras ciudades.` },
     { p: 'La Universidad Señor de Sipán ha demostrado un buen manejo de los recursos económicos y financieros, ya que cumple con los proveedores, los trabajadores y el Estado, pagando puntualmente sus obligaciones.' },
     { p: `Respecto de sus recursos humanos, los perfiles docentes exigen maestría y doctorado; para esta carrera se requiere contar con Químicos Farmacéuticos con grado de maestro o doctor y especialistas en farmacia clínica, farmacognosia, tecnología farmacéutica, análisis clínicos y bioquímica ${P}.` },
     { p: `En cuanto a los recursos materiales, además de la infraestructura moderna de la USS, el programa requiere laboratorios especializados (química general y orgánica, análisis instrumental, farmacognosia, tecnología farmacéutica, microbiología, bioquímica clínica y biología molecular, y farmacia simulada) que cumplan las Condiciones Básicas de Calidad ${V}. Los recursos tecnológicos de la USS son desarrollados por sus técnicos y se hace un uso eficiente de las aplicaciones de la red.` },
@@ -427,7 +442,7 @@ module.exports = {
 
     // VIII
     { h1: 'VIII.- CONCLUSIONES' },
-    { p: 'El presente informe técnico sustenta la pertinencia de crear el programa de estudios de Farmacia y Bioquímica en la región Lambayeque (Chiclayo). La exigencia legal de un Químico Farmacéutico en cada uno de los 1 580 establecimientos farmacéuticos privados de la región, frente a solo 812 profesionales colegiados (y cerca de 225 establecimientos nuevos por año), la expansión hospitalaria de EsSalud, la demanda de diagnóstico analítico y control agroindustrial, la carga de enfermedad regional y el comercio ilegal de medicamentos generan una demanda estructural de estos profesionales, mientras que la oferta licenciada en la región es muy reducida tras el cese de universidades no licenciadas de Chiclayo.' },
+    { p: 'El presente informe técnico sustenta la pertinencia de crear el programa de estudios de Farmacia y Bioquímica en la región Lambayeque (Chiclayo). La exigencia legal de un Químico Farmacéutico en cada uno de los 1 580 establecimientos farmacéuticos privados de la región, frente a solo 812 profesionales colegiados (y cerca de 225 establecimientos nuevos por año), la expansión hospitalaria de EsSalud, la demanda de diagnóstico analítico y control agroindustrial, la carga de enfermedad regional y el comercio ilegal de medicamentos generan una demanda estructural de estos profesionales, mientras que la oferta licenciada en la región es muy reducida tras el cese de universidades no licenciadas de Chiclayo; solo la UAP llegó a tener unos 960 estudiantes de Farmacia en Chiclayo antes de cerrar en 2019.' },
     { p: 'Lambayeque presenta un entorno económico favorable: aporta el 2,7 % del PBI nacional, creció 5,2 % en 2024, cuenta con 79 085 MYPE (89 % en comercio y servicios) y una cartera de inversión superior a S/ 8 800 millones que incluye proyectos de salud. La USS cuenta con sede en la región, respaldo financiero y experiencia en ciencias de la salud.' },
     { p: `La estimación referencial de demanda muestra una brecha de entre 1 300 y 4 600 jóvenes por año según el escenario (Tablas 4 y 7). La viabilidad final depende de validar esa estimación con una encuesta propia de intención vocacional y de la confirmación de la inversión en laboratorios y de la plana docente ${P}.` },
 
@@ -466,7 +481,7 @@ module.exports = {
       'Gerencia Regional de Educación Lambayeque. Plataforma "Mi Carrera en tu Cole".',
       'INEI (2018). Resultados definitivos de los Censos Nacionales 2017 – Lambayeque.',
       'GERESA Lambayeque. Notas de prensa sobre operativos contra medicamentos falsificados.',
-      'SUNEDU. Resoluciones de licenciamiento institucional (Universidad de Chiclayo, Universidad de Lambayeque, Universidad Juan Mejía Baca, UNPRG).',
+      'SUNEDU. Resoluciones de licenciamiento institucional (Universidad Alas Peruanas, Universidad de Chiclayo, Universidad de Lambayeque, Universidad Juan Mejía Baca, UNPRG).',
       'EsSalud. Anuncios de construcción de hospitales en Lambayeque.',
       'Arellano Consultoría (2025). Dónde Quiero Estudiar (DQE) – Universidades Norte. arellano.pe/donde-quiero-estudiar.',
       'Gestión (2025). UTP y UCV se pelean alumnado en el norte: así ciudades se reparten las preferencias.',
