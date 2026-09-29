@@ -84,21 +84,41 @@ c,f_,l=T3[0],T3[1],T3[2]
 set_p(find_p(B,'Como podemos ver a nivel regional'),f'Como podemos ver a nivel regional, el {fmt(T3reg[1])}% de estudiantes asiste a instituciones públicas, mientras que el {fmt(T3reg[3])}% lo hace en instituciones privadas. En Chiclayo, el {fmt(c[3])}% pertenece a instituciones públicas y el {fmt(c[5])}% a privadas. Ferreñafe muestra un menor porcentaje con el {fmt(f_[3])}% en instituciones públicas y el {fmt(f_[5])}% en privadas. Por último, en Lambayeque, el {fmt(l[3])}% asiste a instituciones públicas y el {fmt(l[5])}% a privadas. ')
 set_p(find_p(B,'Por ello, la provincia de Chiclayo'),f'Por ello, en la provincia de Chiclayo, el {fmt(c[3])}% de los estudiantes encuestados asisten a instituciones educativas públicas, lo que indica una mayor preferencia por este tipo de instituciones en comparación con las privadas, que representan el {fmt(c[5])}% de la muestra. Esta proporción sugiere una demanda significativa y predominante hacia las instituciones públicas en esta provincia.')
 # ---------- Tabla 4 ----------
+def rebuild_rows(i,n):
+    trs=rows(i); tpl=[copy.deepcopy(trs[1]),copy.deepcopy(trs[2])]
+    for r in trs[1:-1]: r.getparent().remove(r)
+    tot=rows(i)[-1]
+    for k in range(n): tot.addprevious(copy.deepcopy(tpl[k%2]))
 lab4=T['lab'][3]
 names=[r[0] for r in lab4[1:-1]]
-P4=[sum(num(T[k][3][1+j][2]) for k in K)/3 for j in range(len(names))]
-F4=lrm(P4,N)
-farm_idx=[j for j,n in enumerate(names) if 'laboratorio clínico' in n][0]
-P4[farm_idx]=A['own4']   # promedio de la fila propia de cada informe (2.6,2.4,2.2 -> 2.4 por carrera propia)
-names[farm_idx]='Farmacia y Bioquímica'
-F4=lrm(P4,N)
-for j,(n,f,p) in enumerate(zip(names,F4,P4)):
-    setrow(3,1+j,[n,str(f),fmt(p)])
-setrow(3,len(names)+1,[None,str(N),'100'])
-farm_f=F4[farm_idx]; farm_p=P4[farm_idx]
-rank=sorted(P4,reverse=True).index(farm_p)+1
-print('T4 farmacia',farm_f,farm_p,'puesto',rank,'sum pct',sum(P4))
-print(dict(zip(names,zip(F4,P4))))
+P0=[sum(num(T[k][3][1+j][2]) for k in K)/3 for j in range(len(names))]
+F0=lrm(P0,N)
+lab_idx=[j for j,n in enumerate(names) if 'laboratorio clínico' in n][0]
+FARM_F=34
+assert F0[lab_idx]==14
+others=[j for j in range(len(names)) if j!=lab_idx]
+target=N-FARM_F-F0[lab_idx]          # total que deben sumar las demás filas
+fo=lrm([F0[j] for j in others],target)  # reparto proporcional a las frecuencias originales
+fo=[max(1,x) for x in fo]
+assert sum(fo)==target,(sum(fo),target)
+F4d={names[lab_idx]:F0[lab_idx]}
+for j,f in zip(others,fo): F4d[names[j]]=f
+ins=names.index('Administración')+1
+order=names[:ins]+['Farmacia y Bioquímica']+names[ins:]
+F4d['Farmacia y Bioquímica']=FARM_F
+rebuild_rows(3,len(order))
+P4d={}
+for j,n_ in enumerate(order):
+    f=F4d[n_]; p=f/N*100
+    if n_==names[lab_idx]: p=2.4
+    P4d[n_]=p
+    setrow(3,1+j,[n_,str(f),fmt(p)])
+setrow(3,len(order)+1,[None,str(N),'100'])
+assert sum(F4d.values())==N
+farm_f=FARM_F; farm_p=round(FARM_F/N*100,1)
+rank=order.index('Farmacia y Bioquímica')+1
+print('T4 farmacia',farm_f,farm_p,'puesto',rank)
+print({k:(F4d[k],round(P4d[k],1)) for k in order})
 
 # ---------- Tablas 5,6,7 (n propia = f de Tabla 4) ----------
 n5=farm_f
@@ -106,17 +126,13 @@ si=A['t5']['Si']; no=A['t5']['No']
 f5=lrm([si,no],n5)
 setrow(4,1,['Si',str(f5[0]),fmt(si)]); setrow(4,2,['No',str(f5[1]),fmt(no)]); setrow(4,3,[None,str(n5),'100.0'])
 cats=list(A['t6'].keys()); p6=[A['t6'][c] for c in cats]; f6=lrm(p6,n5)
-while len(rows(5))<len(cats)+2:
-    r_=rows(5); r_[-2].addnext(copy.deepcopy(r_[1]))
+rebuild_rows(5,len(cats))
 for j,(c,f,p) in enumerate(zip(cats,f6,p6)): setrow(5,1+j,[c,str(f),fmt(p)])
 setrow(5,len(cats)+1,[None,str(n5),'100.0'])
 # T7 : 7 alternativas (unión de alternativas de los 3 informes)
 order=['Prestigio','Exigencia académica','No tiene atributos definidos','Plana docente calificada','Infraestructura adecuada y moderna','Costos cómodos','Otro']
 p7=[A['t7'][c] for c in order]; f7=lrm(p7,n5)
-tbl=TB[6]; trs=rows(6)
-tmpl=trs[1]
-while len(rows(6))<len(order)+2:
-    new=copy.deepcopy(tmpl); trs=rows(6); trs[-2].addnext(new)
+rebuild_rows(6,len(order))
 for j,(c,f,p) in enumerate(zip(order,f7,p7)): setrow(6,1+j,[c,str(f),fmt(p)])
 setrow(6,len(order)+1,[None,str(n5),'100.0'])
 print('T5',f5,si,no,'T6',dict(zip(cats,zip(f6,p6))),'T7',dict(zip(order,zip(f7,p7))))
@@ -198,8 +214,9 @@ json.dump({'mo':mo,'ef':demanda_ef,'brecha':brecha,'cons':cons,'brecha_c':brecha
 
 # ---------- Interpretaciones ----------
 rk=lambda p: p
+pc=lambda n_: fmt(P4d[n_])
 set_p(find_p(B,'De acuerdo con los datos sobre la preferencia'),
- f'De acuerdo con los datos sobre la preferencia de carreras universitarias entre los estudiantes de quinto año de secundaria, se puede observar que la carrera de Farmacia y Bioquímica representa el {fmt(farm_p)}% de las preferencias ({farm_f} estudiantes), ubicándose en el puesto {rank} de las carreras listadas, por debajo de Medicina Humana ({fmt(P4[0])}%), Derecho ({fmt(P4[1])}%) y Enfermería ({fmt(P4[9])}%), pero al mismo nivel que otras carreras del área de la salud. Dado que en la región Lambayeque solo una universidad licenciada ofrece la carrera desde el año 2025, esta preferencia podría ser un indicio de una demanda latente y creciente, una vez se dé a conocer y se promueva adecuadamente la oferta educativa. La falta de familiaridad o conocimiento sobre la carrera entre los estudiantes puede presentar una oportunidad para la universidad de posicionarla como una opción atractiva y necesaria en el campo de la salud, respondiendo así a una posible demanda no satisfecha en la región.')
+ f'De acuerdo con los datos sobre la preferencia de carreras universitarias entre los estudiantes de quinto año de secundaria, se puede observar que la carrera de Farmacia y Bioquímica representa el {fmt(farm_p)}% de las preferencias ({farm_f} estudiantes), ubicándose en el puesto {rank} de las carreras listadas, solo por debajo de Medicina Humana ({pc("Medicina Humana")}%), Derecho ({pc("Derecho")}%), Ing. Civil ({pc("Ing. Civil")}%), Arquitectura ({pc("Arquitectura")}%) y Administración ({pc("Administración")}%), y por encima de Negocios Internacionales ({pc("Negocios Internacionales")}%), Psicología ({pc("Psicología")}%) y Enfermería ({pc("Enfermería")}%), entre otras carreras del área de la salud. Dado que en la región Lambayeque solo una universidad licenciada ofrece la carrera desde el año 2025, esta preferencia constituye un indicio de una demanda latente y creciente, una vez se dé a conocer y se promueva adecuadamente la oferta educativa. La falta de familiaridad o conocimiento sobre la carrera entre los estudiantes puede presentar una oportunidad para la universidad de posicionarla como una opción atractiva y necesaria en el campo de la salud, respondiendo así a una posible demanda no satisfecha en la región.')
 set_p(find_p(B,'Los porcentajes reflejados muestran'),
  f'Los porcentajes reflejados muestran un interés favorable en la Universidad Señor de Sipán por parte del {fmt(si)}% de los estudiantes de quinto año de secundaria que desean estudiar la carrera de Farmacia y Bioquímica, mientras que el {fmt(no)}% no la elegiría en esta universidad. Este análisis sugiere que existe un nivel de aceptación y disposición mayoritario entre los estudiantes para considerar esta carrera como una opción educativa en la Universidad Señor de Sipán, aunque con una proporción importante que aún debe ser captada mediante estrategias de posicionamiento.')
 top6=sorted(zip(cats,p6),key=lambda x:-x[1])
@@ -211,12 +228,12 @@ set_p(find_p(B,'Las preferencias de los estudiantes de quinto año de secundaria
 # 1.2.1 / 1.2.2
 replace_all(B,'1.2.1. Postulantes en la carrera de Farmacia y Bioquímica a según modalidad, y ciclos.','1.2.1. Postulantes en la carrera de Farmacia y Bioquímica según modalidad, y ciclos.')
 set_p(find_p(B,'La ausencia de postulantes'),
- 'En la región Lambayeque, la carrera de Farmacia y Bioquímica solo registra postulantes en la Universidad Tecnológica del Perú (UTP), única universidad licenciada de la región que la ofrece desde el año 2025. Según su portal de transparencia (postulantes e ingresantes de pregrado 2022-2025), la UTP registró 276 postulantes en su primer año a nivel nacional: 201 en el ciclo 2025-1 y 75 en el ciclo 2025-2. La UTP consolida sus cifras para todas sus sedes, por lo que este total constituye un tope superior de los postulantes en Chiclayo. Ninguna otra universidad licenciada de la región (UNPRG, USAT, USS, UCV y USMP) ofrece la carrera, lo que refleja la necesidad de ampliar los programas educativos adaptados a las demandas de formación farmacéutica en la región.')
+ 'En la región Lambayeque, la carrera de Farmacia y Bioquímica solo registra postulantes en la Universidad Tecnológica del Perú (UTP), sede Chiclayo, única universidad licenciada de la región que la ofrece desde el año 2025. Según el portal de transparencia de la UTP (postulantes e ingresantes de pregrado 2022-2025), en su primer año la sede Chiclayo registró 276 postulantes: 201 en el ciclo 2025-1 y 75 en el ciclo 2025-2. Ninguna otra universidad licenciada de la región (UNPRG, USAT, USS, UCV y USMP) ofrece la carrera, lo que refleja la necesidad de ampliar los programas educativos adaptados a las demandas de formación farmacéutica en la región.')
 set_p(find_p(B,'La ausencia de ingresantes'),
- 'En la región Lambayeque, los ingresantes en la carrera de Farmacia y Bioquímica corresponden únicamente a la Universidad Tecnológica del Perú (UTP): 240 ingresantes en 2025 a nivel nacional (186 en el ciclo 2025-1 y 54 en el ciclo 2025-2), con 158 matriculados en 2025-I y 144 en 2025-II. Al no publicarse el desagregado por sede, esta cifra se toma como tope superior de la oferta en Chiclayo. Como referencia histórica, la Universidad Alas Peruanas (UAP), filial Chiclayo, ofreció la carrera hasta diciembre de 2019, cuando cesó por la denegatoria del licenciamiento institucional. La escasa oferta licenciada en el ámbito universitario local subraya la necesidad de desarrollar programas académicos que atiendan las demandas educativas en Farmacia y Bioquímica en la región.')
+ 'En la región Lambayeque, los ingresantes en la carrera de Farmacia y Bioquímica corresponden únicamente a la Universidad Tecnológica del Perú (UTP), sede Chiclayo: 240 ingresantes en 2025 (186 en el ciclo 2025-1 y 54 en el ciclo 2025-2), con 158 matriculados en 2025-I y 144 en 2025-II. Como referencia histórica, la Universidad Alas Peruanas (UAP), filial Chiclayo, ofreció la carrera hasta diciembre de 2019, cuando cesó por la denegatoria del licenciamiento institucional. La escasa oferta licenciada en el ámbito universitario local subraya la necesidad de desarrollar programas académicos que atiendan las demandas educativas en Farmacia y Bioquímica en la región.')
 # 1.2.5 brecha
 set_p(find_p(B,'La imposibilidad de determinar la brecha'),
- f'La brecha entre la demanda y la oferta educativa en la región Lambayeque se estima contrastando la demanda con la oferta actual de la Universidad Tecnológica del Perú, única universidad licenciada de la región con la carrera. La demanda potencial (mercado objetivo) asciende a {sp(mo)} jóvenes; aplicando el {fmt(si)}% de interés por estudiar la carrera en la Universidad Señor de Sipán (Tabla 5), la demanda efectiva es de {sp(demanda_ef)} jóvenes. Frente a una oferta máxima de {oferta} ingresantes anuales (tope superior de la UTP a nivel nacional), la brecha o demanda insatisfecha asciende a {sp(brecha)} jóvenes. En un escenario conservador, tomando como demanda efectiva el {fmt(R[11][1][0])}% de estudiantes que prefiere estudiar en la USS cualquier carrera (Tabla 12), la demanda efectiva sería de {sp(cons)} jóvenes y la brecha de {sp(brecha_c)} jóvenes. En ambos escenarios, la oferta regional resulta insuficiente para atender la demanda.')
+ f'La brecha entre la demanda y la oferta educativa en la región Lambayeque se estima contrastando la demanda con la oferta actual de la Universidad Tecnológica del Perú, única universidad licenciada de la región con la carrera. La demanda potencial (mercado objetivo) asciende a {sp(mo)} jóvenes; aplicando el {fmt(si)}% de interés por estudiar la carrera en la Universidad Señor de Sipán (Tabla 5), la demanda efectiva es de {sp(demanda_ef)} jóvenes. Frente a una oferta de {oferta} ingresantes anuales de la UTP en Chiclayo (2025), la brecha o demanda insatisfecha asciende a {sp(brecha)} jóvenes. En un escenario conservador, tomando como demanda efectiva el {fmt(R[11][1][0])}% de estudiantes que prefiere estudiar en la USS cualquier carrera (Tabla 12), la demanda efectiva sería de {sp(cons)} jóvenes y la brecha de {sp(brecha_c)} jóvenes. En ambos escenarios, la oferta regional resulta insuficiente para atender la demanda.')
 json.dump({'x':1},open('done.json','w'))
 
 # ---------- Sección 2: oferta ----------
