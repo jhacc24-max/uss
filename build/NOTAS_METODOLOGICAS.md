@@ -14,6 +14,7 @@ Generado con `build/extract.py` → `calc.py` → `build.py` (plantilla: informe
 | Población 2017 | 1 197 260 | INEI, Censo 2017 (BCRP: 1 197 mil) |
 | NSE AB / C | 6.8 % / 29.9 % | APEIM 2025 (data ENAHO 2024) |
 | Jóvenes 15-29 años (2025) | 308 638 | INEI-SIRTOD, en OSEL 2025 |
+| Matrícula 5.º secundaria 2025 | 21 255 estudiantes; 466 I.E. (239 públicas, 227 privadas) | MINEDU, SIAGIE Reporte de Matrícula 2025 (`demanda/01. SIAGIE…rar`, Lambayeque, secundaria EBR, grado QUINTO; resumen en `build/siagie_lambayeque_5to.json`) |
 | Oferta UTP 2025 | 276 postulantes / 240 ingresantes | Portal de transparencia UTP |
 | Establecimientos farmacéuticos / QF colegiados | 1 580 / 812 | DIGEMID jun-2026 / CQFD Lambayeque |
 
@@ -22,6 +23,10 @@ Generado con `build/extract.py` → `calc.py` → `build.py` (plantilla: informe
 - Mercado objetivo = 205 759 × 2.4 % = 4 938; demanda efectiva = 4 938 × 62.4 % = 3 080; brecha = 3 080 − 240 = 2 840. Escenario conservador: 4 938 × 18.7 % = 923 → brecha 683.
 - Serie de población 2017-2026 por interpolación geométrica (1.86 % anual).
 
-## Pendiente de verificar (no accesible desde el entorno: ESCALE y carreras.pe bloqueados)
-- Tablas 1-2 y 20 (matrícula de 5.º de secundaria por provincia, ESCALE 2022) y Figura 3 (instituciones de educación superior por provincia) se mantienen como en los informes originales.
+## Tablas 1-3 y 20 (SIAGIE 2025)
+- Tabla 1 y Tabla 20 se recalcularon con la matrícula 2025. Tabla 2: Wh = Ni/N; n = N·z²·ΣWhPhQh / (N·e² + z²·ΣWhPhQh) con z = 1.96 y e = 3.985 % (error del informe original, ≈ 4 %; n0 = 605), lo que da n = 588, igual que en los informes originales; ni por estrato con el método del mayor resto. Tabla 3 sale de la Tabla 2.
+- La imagen de la fórmula (n0 = 605, n = 584) es la del informe original y no se modificó; su «584» no coincide con el 588 de la Tabla 2 en el original.
+
+## Pendiente de verificar
+- Figura 3 (instituciones de educación superior por provincia) se mantiene como en los informes originales (ESCALE/carreras.pe no accesibles desde el entorno).
 - Listado de universidades que ofrecen Farmacia y Bioquímica (sección 2.2): referencial, no exhaustivo.

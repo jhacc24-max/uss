@@ -38,7 +38,7 @@ replace_all(B,'la Universidad Señor de Sipán -2026. ','la Universidad Señor d
 
 # ---------- presentación ----------
 set_p(find_p(B,'Es fundamental mencionar'),
- 'Es fundamental mencionar que el presente estudio está fechado en setiembre de 2026. Los porcentajes de las variables de preferencia y disposición del estudiante provienen del levantamiento de campo realizado entre los meses de julio, agosto y setiembre de 2023 a estudiantes de 5to de secundaria de la Región Lambayeque, promediados a partir de los tres informes de demanda social de referencia (Laboratorio Clínico, Radiología y Terapia Física y Rehabilitación). Los cálculos muestrales se fundamentan en el marco muestral ESCALE 2022, mientras que los datos poblacionales, socioeconómicos y de oferta se actualizaron con la información disponible hasta setiembre de 2026 (CPI Research 2026, APEIM 2025, INEI/OSEL 2025, DIGEMID 2026 y portales institucionales), la cual se incorpora en el análisis descriptivo de la demanda educativa.')
+ 'Es fundamental mencionar que el presente estudio está fechado en setiembre de 2026. Los porcentajes de las variables de preferencia y disposición del estudiante provienen del levantamiento de campo realizado entre los meses de julio, agosto y setiembre de 2023 a estudiantes de 5to de secundaria de la Región Lambayeque, promediados a partir de los tres informes de demanda social de referencia (Laboratorio Clínico, Radiología y Terapia Física y Rehabilitación) y aplicados al marco muestral actualizado con la matrícula 2025 del SIAGIE (MINEDU), con el que se recalcularon las frecuencias. Los cálculos muestrales se fundamentan, por tanto, en dicho marco, mientras que los datos poblacionales, socioeconómicos y de oferta se actualizaron con la información disponible hasta setiembre de 2026 (CPI Research 2026, APEIM 2025, INEI/OSEL 2025, DIGEMID 2026 y portales institucionales), la cual se incorpora en el análisis descriptivo de la demanda educativa.')
 
 # ---------- ámbito ----------
 set_p(find_p(B,'En consecuencia, tenemos una población'),
@@ -47,21 +47,42 @@ replace_all(B,'Genera cambios en instituciones y centros privados en diagnóstic
 replace_all(B,'Lleva tu talento a empresas comercializadoras de equipos, insumos y software para radiología clínica y radioterapia.','Lleva tu talento a empresas de la industria farmacéutica y distribuidoras de medicamentos, dispositivos médicos y productos sanitarios.')
 replace_all(B,'Desarrolla conocimiento innovador en centros de investigación.','Desarrolla conocimiento innovador en centros de investigación y en laboratorios de control de calidad.')
 
-# ---------- Tabla 3 (promedio %) ----------
-def avgpct(i,r,c):  # promedio de % impresos de fila r col c en los 3 informes
-    return sum(num(T[k][i][r][c]) for k in K)/3
-# Tabla 3: filas Regional, Chiclayo, Ferreñafe, Lambayeque (r=2..5); cols pública n,%, privada n,%
-t3=[]
-for r,lab in zip(range(2,6),['Regional','Chiclayo','Ferreñafe','Lambayeque']):
-    pu=avgpct(2,r,3); pr=avgpct(2,r,5)
-    tot=N if r==2 else round(sum(num(T[k][2][r][1]) for k in K)/3)
-    # frecuencias recalculadas con el total muestral (se preservan los % promediados)
-    fpu=round(pu*N/100); fpr=round(pr*N/100)
-    t3.append((lab,tot,fpu,pu,fpr,pr))
-for (lab,tot,fpu,pu,fpr,pr),r in zip(t3,range(2,6)):
-    setrow(2,r,[None,str(tot) if r>2 else str(N),str(fpu),fmt(pu)+'%',str(fpr),fmt(pr)+'%'])
-T3=t3
+# ---------- Universo 2025 (SIAGIE), Tablas 1, 2 y 3 ----------
+S=json.load(open('siagie_lambayeque_5to.json'))
+PV=['CHICLAYO','FERREÑAFE','LAMBAYEQUE']
+NAMES={'CHICLAYO':'Chiclayo','FERREÑAFE':'Ferreñafe','LAMBAYEQUE':'Lambayeque'}
+Npop=sum(S[p]['est_pub']+S[p]['est_priv'] for p in PV)
+Npub=sum(S[p]['est_pub'] for p in PV); Npriv=Npop-Npub
+IEpub=sum(S[p]['ie_pub'] for p in PV); IEpriv=sum(S[p]['ie_priv'] for p in PV)
+z=1.96; e_=0.03985  # error estipulado del informe original (≈4 %; varianza V=0.00041337, n0=605)
+strata=[(p,g) for p in PV for g in ['pub','priv']]
+Ni=[S[p]['est_'+g] for p,g in strata]
+W_=[x/Npop for x in Ni]
+sumW=sum(w*0.5*0.5 for w in W_)
+n_form=Npop*z*z*sumW/(Npop*e_*e_+z*z*sumW)
+N=int(round(n_form))
+ni=lrm([w*100 for w in W_],N)
+print('Universo',Npop,'n muestral',n_form,N,ni)
+for j,p in enumerate(PV):
+    r=2+j
+    setrow(0,r,[NAMES[p],str(S[p]['ie_pub']+S[p]['ie_priv']),str(S[p]['ie_pub']),str(S[p]['ie_priv']),None,sp(S[p]['est_pub']+S[p]['est_priv']),sp(S[p]['est_pub']),sp(S[p]['est_priv'])])
+setrow(0,5,['Total',str(IEpub+IEpriv),str(IEpub),str(IEpriv),None,sp(Npop),sp(Npub),sp(Npriv)])
+lbl={'pub':'publica','priv':'privada'}
+for k,((p,g),n_i,w) in enumerate(zip(strata,ni,W_)):
+    setrow(1,2+k,[f'{NAMES[p]} (Estudiantes de I.E. {lbl[g]})',sp(S[p]['est_'+g]),f'{w:.6f}' if w>=0.01 else f'{w:.5f}','0.500','0.500',f'{w*0.25:.7f}',str(n_i)])
+setrow(1,8,['Total',sp(Npop),'1',None,None,f'{sumW:.4f}',str(N)])
+npub_reg=sum(ni[k] for k in range(0,6,2)); npriv_reg=N-npub_reg
+setrow(2,2,['Regional',str(N),str(npub_reg),fmt(npub_reg/N*100)+'%',str(npriv_reg),fmt(npriv_reg/N*100)+'%'])
+T3=[]
+for j,p in enumerate(PV):
+    a_,b_=ni[2*j],ni[2*j+1]
+    setrow(2,3+j,[NAMES[p],str(a_+b_),str(a_),fmt(a_/N*100)+'%',str(b_),fmt(b_/N*100)+'%'])
+    T3.append((NAMES[p],a_+b_,a_,a_/N*100,b_,b_/N*100))
+T3reg=(npub_reg,npub_reg/N*100,npriv_reg,npriv_reg/N*100)
 
+c,f_,l=T3[0],T3[1],T3[2]
+set_p(find_p(B,'Como podemos ver a nivel regional'),f'Como podemos ver a nivel regional, el {fmt(T3reg[1])}% de estudiantes asiste a instituciones públicas, mientras que el {fmt(T3reg[3])}% lo hace en instituciones privadas. En Chiclayo, el {fmt(c[3])}% pertenece a instituciones públicas y el {fmt(c[5])}% a privadas. Ferreñafe muestra un menor porcentaje con el {fmt(f_[3])}% en instituciones públicas y el {fmt(f_[5])}% en privadas. Por último, en Lambayeque, el {fmt(l[3])}% asiste a instituciones públicas y el {fmt(l[5])}% a privadas. ')
+set_p(find_p(B,'Por ello, la provincia de Chiclayo'),f'Por ello, en la provincia de Chiclayo, el {fmt(c[3])}% de los estudiantes encuestados asisten a instituciones educativas públicas, lo que indica una mayor preferencia por este tipo de instituciones en comparación con las privadas, que representan el {fmt(c[5])}% de la muestra. Esta proporción sugiere una demanda significativa y predominante hacia las instituciones públicas en esta provincia.')
 # ---------- Tabla 4 ----------
 lab4=T['lab'][3]
 names=[r[0] for r in lab4[1:-1]]
@@ -155,9 +176,14 @@ setrow(18,1,['Población de 16 a 25 años',sp(p1625),fmt(pct1625)]); setrow(18,2
 set_p(find_p(B,'Nota: Elaboración propia',0),'Nota: INEI – SIRTOD, en OSEL Lambayeque (2025); elaboración propia')
 set_p(find_p(B,'El mercado potencial está conformado por los jóvenes'),f'El mercado potencial está conformado por los jóvenes de 16 a 25 años, quienes representan el {fmt(pct1625)}% de la población regional de Lambayeque, es decir {sp(p1625)} personas. Se estimó a partir de la población de 15 a 29 años de Lambayeque ({sp(J15_29)} jóvenes según el INEI, 2025), de la cual los 10 años de edad comprendidos entre los 16 y 25 años equivalen a 10/15 partes, bajo el supuesto de distribución uniforme por edad simple.')
 # Tabla 20
-est=20631; pct20=est/POP26*100
-setrow(19,1,[None,sp(est).replace(' ',''),fmt(pct20)])
-set_p(find_p(B,'El mercado factible está conformado por los estudiantes que terminan'),f'El mercado factible está conformado por los estudiantes de 5° de secundaria de la región Lambayeque (marco muestral ESCALE 2022), que asciende a {est} estudiantes, lo que representa el {fmt(pct20)}% de la población regional proyectada al 2026.')
+est=Npop; pct20=est/POP26*100
+setrow(19,1,[None,str(est),fmt(pct20)])
+set_p(find_p(B,'El mercado factible está conformado por los estudiantes que terminan'),f'El mercado factible está conformado por los estudiantes de 5° de secundaria de la región Lambayeque (SIAGIE, Reporte de Matrícula 2025), que asciende a {est} estudiantes, lo que representa el {fmt(pct20)}% de la población regional proyectada al 2026.')
+
+replace_all(B,'según provincia de la Región Lambayeque, 2022','según provincia de la Región Lambayeque, 2025')
+replace_all(B,'Fuente: MINEDU, Escale – Censo Educativo 2020.','Fuente: MINEDU, SIAGIE – Reporte de Matrícula 2025 (5.° grado de secundaria, EBR).')
+set_p(find_p(B,'En el año 2020, la Región'),f'En el año 2025, la Región Lambayeque contaba con un total de {IEpub+IEpriv} instituciones educativas con 5.° grado de secundaria, de las cuales {IEpub} eran públicas y {IEpriv} eran privadas. El número total de estudiantes de 5.° de secundaria en la región alcanzaba los {sp(Npop)}, distribuidos en {sp(Npub)} estudiantes en instituciones públicas y {sp(Npriv)} en instituciones privadas, según datos del MINEDU obtenidos del SIAGIE - Reporte de Matrícula 2025.')
+replace_all(B,'588',str(N))
 # Tabla 21 mercado objetivo
 mo=round(p1625*farm_p/100)
 setrow(20,0,['Farmacia y Bioquímica',str(mo),fmt(farm_p)+'%'])

@@ -1,0 +1,21 @@
+{
+ "CHICLAYO": {
+  "ie_pub": 93,
+  "ie_priv": 175,
+  "est_pub": 8070,
+  "est_priv": 5221
+ },
+ "FERREÑAFE": {
+  "ie_pub": 49,
+  "ie_priv": 8,
+  "est_pub": 1820,
+  "est_priv": 177
+ },
+ "LAMBAYEQUE": {
+  "ie_pub": 97,
+  "ie_priv": 44,
+  "est_pub": 4873,
+  "est_priv": 1094
+ },
+ "_fuente": "SIAGIE Reporte Matrícula 2025 (MINEDU), Lambayeque, nivel Secundaria (EBR), grado QUINTO; IE = COD_MOD+ANEXO distintos"
+}
